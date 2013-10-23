@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>habitaclick.com</title>
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/facebox.js"></script>
+<script type="text/javascript" src="js/hc.js"></script>
+</head>
+<body>
+<div id="container" class="wrap">
+  <!-- header -->
+  <div id="header">
+    <!-- topMenu -->
+    <div id="topMenu">
+      <ul>
+        <li><a href="registro.html" title="Reg&iacute;strate">Reg&iacute;strate</a></li>
+        <li><a href="contrasena.html" title="&iquest;Olvidaste tu contrase&ntilde;a?">&iquest;Olvidaste tu contrase&ntilde;a?</a></li>
+        <li><a href="login.html" rel="facebox" title="Ingresar">Ingresar</a></li>
+      </ul>
+    </div>
+    <!-- /topMenu -->
+    <div id="mainMenu">
+      <ul>
+        <li class="current"><a href="home.html" title="Inicio"><span>Inicio</span></a></li>
+        <li><a href="inmuebles.html" title="Inmuebles"><span>Inmuebles</span></a></li>
+        <li><a href="publicar.html" title="Publicar"><span>Publicar</span></a></li>
+        <li><a href="destacados.html" title="Destacados"><span>Destacados</span></a></li>
+      </ul>
+    </div>
+    <h1><a href="home.html" title="habitaclick.com">habitaclick.com</a></h1>
+  </div>
+  <!-- /header -->
+  <!-- wrapper -->
+  <div id="wrapper">
+    <!-- video holder -->
+    <div id="vidHold">
+      <object type="application/x-shockwave-flash" data="media/video.swf" width="336" height="250">
+        <param name="movie" value="media/video.swf" />
+        <param name="bgcolor" value="#FFF" />
+        <param name="wmode" value="transparent" />
+        <a title="flash player" href="http://www.macromedia.com/shockwave/download/alternates/"> <img src="pix/temp/videoref.jpg" width="336" height="250" alt="Descargar Flash Player" /></a>
+      </object>
+    </div>
+    <!-- /video holder -->
+    <!-- searchform_h -->
+    <form id="searchform_h" name="searchform_h" method="post" action="">
+      <strong>Encuentra un Inmueble en</strong>
+      <p>
+        <input name="srch_input" type="text" id="srch_input"
+     value="Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir" onfocus="if (this.value == 'Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir';}"  />
+      </p>
+      <!-- split main form -->
+      <div class="splitForm">
+        <!-- split main form L -->
+        <div class="splitFormL">
+          <p class="srch_type">
+            <label for="type">Tipo de inmueble</label>
+            <select name="type" id="type">
+              <option>Selecciona el tipo de inmueble que buscas</option>
+            </select>
+          </p>
+          <!-- split 50 form -->
+          <div class="split50">
+            <!-- split50 form L -->
+            <div class="floatL">
+              <p>
+                <label for="price">Precio</label>
+                <select name="price" id="price">
+                  <option>Valor aproximado</option>
+                </select>
+              </p>
+              <p>
+                <label for="rooms">Cuartos</label>
+                <select name="rooms" id="rooms">
+                  <option>Los que sean</option>
+                </select>
+              </p>
+            </div>
+            <!-- / split50 form L -->
+            <!-- split50 form R -->
+            <div class="floatR">
+              <p>
+                <label for="price2">Hasta</label>
+                <select name="price2" id="price2">
+                  <option>Valor aproximado</option>
+                </select>
+              </p>
+              <p>
+                <label for="baths">Ba&ntilde;os</label>
+                <select name="baths" id="baths">
+                  <option>Los que sean</option>
+                </select>
+              </p>
+            </div>
+            <!-- /split50 form R -->
+          </div>
+          <!-- / split50 form  -->
+          <p class="center">
+            <label for="chk_renta">Renta</label>
+            <input type="checkbox" name="chk_renta" id="chk_renta" />
+            <label for="chk_venta">Venta</label>
+            <input type="checkbox" name="chk_venta" id="chk_venta" />
+            <label for="chk_traspaso">Traspaso</label>
+            <input type="checkbox" name="chk_traspaso" id="chk_traspaso" />
+          </p>
+        </div>
+        <!-- /split main form L -->
+        <!-- split main form R -->
+        <div class="splitFormR">
+          <p>
+            <input type="image" src="pix/search/btnSearch.gif" name="submit" id="submit" value="Buscar" />
+          </p>
+        </div>
+        <!-- split main form R -->
+      </div>
+      <!-- /split main form -->
+    </form>
+    <!-- /searchform_h -->
+    <!-- tabsContainer -->
+    <div id="tabsContainer">
+      <!-- list -->
+      <ul id="listSec">
+        <li id="ftdTab_sec01"><a class="selected" href="#sec01" title="Ubica - Inmuebles por ciudad, colonia y m&aacute;s..."><strong>Ubica</strong>Inmuebles por ciudad, colonia y m&aacute;s...</a></li>
+        <li id="ftdTab_sec02"><a href="#sec02" title="Media - Agrega videos e im&aacute;genes..."><strong>Media</strong>Agrega videos e im&aacute;genes...</a></li>
+        <li id="ftdTab_sec03" class="last"><a href="#sec03" title="Alertas Recibe novedades, guarda inmuebles"><strong>Alertas</strong>Recibe novedades, guarda inmuebles</a></li>
+      </ul>
+      <!-- / list -->
+      <!-- sec01 -->
+      <div id="sec01" class="tabSec"> <img class="imageRight" src="pix/temp/maps.jpg" width="311" height="189" alt="Ubica - Inmuebles por ciudad, colonia y m&aacute;s..." />
+        <p>Sed sit amet nunc. In hac habitasse platea dictumst. Mauris orci mi, ultricies ac, venenatis et, faucibus a, eros. </p>
+        <p>Proin eu ante sed mauris mattis placerat. Sed lacus mauris, molestie vehicula, suscipit ac, facilisis ac, mi. Donec rutrum.</p>
+      </div>
+      <!-- /sec01 -->
+      <!-- sec01 -->
+      <div id="sec02" class="tabSec"> <img class="imageRight" src="pix/temp/maps.jpg" width="311" height="189" alt="Ubica - Inmuebles por ciudad, colonia y m&aacute;s..." />
+        <p>Nullam mollis, tellus et tincidunt viverra, justo orci porta dui, vel  ultricies urna massa et leo. Nulla sit amet odio. Mauris scelerisque  est consectetuer augue. In hac habitasse platea dictumst. Donec tempus,  est sit amet pellentesque interdum, lectus nisl consequat velit, nec  iaculis lacus leo sit amet dolor. Praesent et ipsum. .</p>
+      </div>
+      <!-- /sec01 -->
+      <!-- sec01 -->
+      <div id="sec03" class="tabSec"> <img class="imageRight" src="pix/temp/maps.jpg" width="311" height="189" alt="Ubica - Inmuebles por ciudad, colonia y m&aacute;s..." />
+        <p>Curabitur hendrerit quam sed  turpis. Nunc sit amet pede ut diam vestibulum lacinia. Nam porta  lacinia lorem. Proin ac sapien eget mi pulvinar elementum. Pellentesque  gravida diam non est aliquam ultrices. Suspendisse potenti.</p>
+      </div>
+      <!-- /sec01 -->
+      <script type="text/javascript"> 
+  $("#listSec").idTabs(); 
+</script>
+    </div>
+    <!-- /tabsContainer -->
+  </div>
+  <!-- wrapper -->
+  <div class="push"></div>
+</div>
+<div id="footer" class="foot">
+  <div class="wrap">
+    <!-- footer right -->
+    <div class="floatR"> <a href="#top" id="aUp" title="Subir">Subir</a> <a href="#" id="logoFoot" title="Volver a la portada de habitaclick">habitaclick</a> <strong>Copyright &copy; 2008<br />
+      GlobexCorporaciones.</strong> </div>
+    <!-- /footer right -->
+    <!-- footer left -->
+    <div class="floatL">
+      <div class="footSec">
+        <h3>Usuarios</h3>
+        <ul>
+          <li><a href="#" title="Inicio">Inicio</a></li>
+          <li><a href="#" title="Ventas">Ventas</a></li>
+          <li><a href="#" title="Rentas">Rentas</a></li>
+          <li><a href="#" title="Mi Habitaclick">Mi Habitaclick</a></li>
+          <li><a href="#" title="Ayuda">Ayuda</a></li>
+          <li><a href="#" title="Pol&iacute;ticas de Privacidad">Pol&iacute;ticas de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footSec">
+        <h3>Habitaclick</h3>
+        <ul>
+          <li><a href="#" title="Acerca de">Acerca de</a></li>
+          <li><a href="#" title="Contacto">Contacto</a></li>
+          <li><a href="#" title="Inmobiliarias">Inmobiliarias</a></li>
+          <li><a href="#" title="T&eacute;rminos">T&eacute;rminos</a></li>
+          <li><a href="#" title="Feedback">Feedback</a></li>
+          <li><a href="#" title="Publicidad">Publicidad</a></li>
+          <li><a href="#" title="Empleos">Empleos</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /footer left -->
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* line 1, ../sass/home.scss */
+#vidHold {
+  width: 336px;
+  float: right;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 9, ../sass/home.scss */
+#searchform_h {
+  width: 588px;
+  border: 4px solid #e8e8e8;
+  padding: 19px 20px;
+  *padding: 21px 20px;
+  overflow: auto;
+  background: white url(../pix/search/searchformBg.gif) bottom left repeat-x;
+  margin-bottom: 30px;
+  font-size: 11px;
+}
+
+/* line 19, ../sass/home.scss */
+#searchform_h p {
+  margin: 5px 0;
+}
+
+/* line 22, ../sass/home.scss */
+#searchform_h strong {
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #2b8dbe;
+}
+
+/* line 28, ../sass/home.scss */
+#searchform_h input,
+#searchform_h select {
+  border: 1px solid #bac3d4;
+}
+
+/* line 31, ../sass/home.scss */
+#searchform_h input#submit {
+  border: none;
+}
+
+/* line 32, ../sass/home.scss */
+#searchform_h label {
+  display: block;
+  float: left;
+  margin: 2px 5px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* line 39, ../sass/home.scss */
+#searchform_h select {
+  font-size: 11px;
+  padding: 4px;
+}
+
+/* line 43, ../sass/home.scss */
+#searchform_h #srch_input {
+  width: 97%;
+  padding: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* line 49, ../sass/home.scss */
+#splitForm {
+  overflow: auto;
+}
+
+/* line 53, ../sass/home.scss */
+#splitForm #splitFormL {
+  width: 374px;
+  _width: 399px;
+  overflow: auto;
+  float: left;
+}
+
+/* line 60, ../sass/home.scss */
+#splitForm #splitFormR {
+  width: 182px;
+  float: right;
+}
+
+/* line 66, ../sass/home.scss */
+#srch_type p label {
+  width: 96px;
+}
+/* line 69, ../sass/home.scss */
+#srch_type p select {
+  width: 268px;
+}
+
+/* line 76, ../sass/home.scss */
+#splitForm #split50 label {
+  width: 44px;
+}
+
+/* line 79, ../sass/home.scss */
+#splitForm #split50 select {
+  width: 129px;
+}
+
+/* line 82, ../sass/home.scss */
+#searchform_h #splitForm p.center {
+  margin: 10px 0 0 0;
+}
+
+/* line 85, ../sass/home.scss */
+#searchform_h #splitForm p.center label {
+  width: 30px;
+  float: none;
+  display: inline;
+}
+
+/* line 90, ../sass/home.scss */
+#searchform_h #splitForm p.center input {
+  *border: none;
+}
+
+/* line 95, ../sass/home.scss */
+#tabsContainer {
+  overflow: auto;
+  clear: both;
+  background-color: #ebf6ff;
+  border: 1px solid #d3ecff;
+  margin: 0 0 30px 0;
+}
+
+/* line 102, ../sass/home.scss */
+#listSec {
+  width: 310px;
+  float: left;
+  background-image: url(../pix/search/ftdTabs.gif);
+  background-position: right;
+  background-repeat: repeat-y;
+}
+
+/* line 109, ../sass/home.scss */
+#listSec li a {
+  padding: 15px 0 15px 70px;
+  display: block;
+  height: 45px;
+  border-bottom: 1px solid #d3ecff;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+/* line 120, ../sass/home.scss */
+#listSec li a strong {
+  font-size: 18px;
+  display: block;
+}
+
+/* line 125, ../sass/home.scss */
+#listSec li a:link,
+#listSec li a:visited {
+  color: #999;
+}
+
+/* line 127, ../sass/home.scss */
+#listSec li a:hover {
+  background-color: #d3ecff;
+}
+
+/* line 131, ../sass/home.scss */
+#listSec li#ftdTab_sec01 a {
+  background-image: url(../pix/icons/ftdSearch.gif);
+}
+
+/* line 134, ../sass/home.scss */
+#listSec li#ftdTab_sec02 a {
+  background-image: url(../pix/icons/ftdMedia.gif);
+}
+
+/* line 137, ../sass/home.scss */
+#listSec li#ftdTab_sec03 a {
+  background-image: url(../pix/icons/ftdAlerts.gif);
+}
+
+/* line 142, ../sass/home.scss */
+#listSec li.last a {
+  border-bottom: none;
+}
+
+/* line 145, ../sass/home.scss */
+#listSec li a.selected {
+  background-color: #ebf6ff;
+  color: #666;
+}
+
+/* line 150, ../sass/home.scss */
+.tabSec {
+  width: 648px;
+  float: left;
+  padding: 10px;
+  background-color: #ebf6ff;
+  font-size: 12px;
+  position: relative;
+}
+
+/* line 158, ../sass/home.scss */
+.tabSec p {
+  _position: relative;
+}

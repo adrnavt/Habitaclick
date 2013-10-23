@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title habitaclick.com
+    %link{:href => "stylesheets/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    #container.wrap
+      / header
+      #header
+        / topMenu
+        #topMenu
+          %ul
+            %li
+              Bienvenido:
+              %strong Mauricio
+            %li
+              %a{:href => "mihabitaclick.html", :title => "Ir a mi habitaclick"} Ir a mi habitaclick
+            %li
+              %a{:href => "logout.html", :title => "Salir de esta cuenta"} Salir de esta cuenta
+        / /topMenu
+        #mainMenu
+          %ul
+            %li
+              %a{:href => "home.html", :title => "Inicio"}
+                %span Inicio
+            %li
+              %a{:href => "inmuebles.html", :title => "Inmuebles"}
+                %span Inmuebles
+            %li
+              %a{:href => "publicar.html", :title => "Publicar"}
+                %span Publicar
+            %li
+              %a{:href => "destacados.html", :title => "Destacados"}
+                %span Destacados
+        %h1
+          %a{:href => "home.html", :title => "habitaclick.com"} habitaclick.com
+      / /header
+      / wrapper
+      #wrapper
+        / path
+        %ul#iconOptions
+          %li.iconAlerts
+            %a{:href => "#"} Alertas
+          %li.iconRss
+            %a{:href => "#"}
+              RSS de:
+              %span Mauricio Caballero
+        .path
+          %a{:href => "home.html", :title => ""} Inicio
+          \»
+          %a{:href => "#"} habitaclick
+          \» Mauricio Caballero
+        / / path
+        / content DASH
+        #contentDash
+          .avatar
+            %a{:href => "#"}
+              %img{:alt => "Nombre de usuario", :height => "48", :src => "pix/iface/small_default_photo.gif", :width => "48"}/
+          %h2
+            %a{:href => "#"} Mauricio Caballero
+            %small Inmobiliaria: N/A
+          / split DASH
+          #splitDash.split
+            / LEFT
+            .floatL
+              / INMUEBLES
+              .padd10
+                .resHdr
+                  %ul.quickNav
+                    %li.btnPrev
+                      %a{:href => "#", :title => "Anterior"} Anterior
+                    %li.btnNext
+                      %a{:href => "#", :title => "Siguiente"} Siguiente
+                  %form#sort_form{:action => "", :method => "post", :name => "sort_form"}
+                    %label{:for => "order"} Ordenar por
+                    %select#order{:name => "order"}
+                      %option Ordenar por
+                      %option Precio
+                      %option Nombre
+                      %option Ranking
+                      %option N° de baños
+                      %option N° de habitaciones
+                      %option Antigüedad
+                      %option Dimensiones
+                    %label{:for => "pagenumber"} Página
+                    %input#pagenumber{:name => "pagenumber", :type => "text", :value => "1"}/
+                    de 1
+                %ul#results
+                  / resultado
+                  %li
+                    %h2
+                      %a{:href => "#"} circunvalación oriente 160
+                    .tmb.res_l
+                      %a.iconVideo{:href => "#", :title => "Video"} Video
+                      %a{:href => "#"}
+                        %img{:alt => "house", :height => "77", :src => "pix/temp/house.gif", :width => "77"}/
+                    .res_m
+                      %p
+                        3 baños — 3 habitaciones
+                        %br/
+                        Para una familia sencilla
+                    .res_rdetails
+                      %ul
+                        %li
+                          %strong Antigüedad:
+                          4 años
+                        %li
+                          %strong> Ancho:
+                          175 m²
+                        %li
+                          %strong Alto:
+                          195 m²
+                        %li
+                          %strong C.P:
+                          33131
+                    .res_r
+                      %p.price
+                        %strong $1,850,000
+                      .rating
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    .res_opt
+                      .cat En Venta
+                      %ul
+                        %li.icnDetails
+                          %a{:href => "inmueble.html", :title => "Visitar inmueble"}
+                            %strong Visitar inmueble
+                        %li.icnAlerts
+                          %a{:href => "#", :title => "Alertas"} Recibir alertas
+                        %li.icnSave
+                          %a{:href => "#", :title => "Salvar"} Salvar
+                        %li.icnShare
+                          %a{:href => "#", :title => "Compartir"} Compartir
+                  / /resultado
+                  / resultado
+                  %li
+                    %h2
+                      %a{:href => "#"} Santa Fe 11
+                    .tmb.res_l
+                      %a{:href => "#"}
+                        %img{:alt => "house", :height => "77", :src => "pix/iface/default.jpg", :width => "77"}/
+                    .res_m
+                      %p
+                        3 baños — 3 habitaciones
+                        %br/
+                        Para una familia sencilla
+                    .res_rdetails
+                      %ul
+                        %li
+                          %strong Antigüedad:
+                          4 años
+                        %li
+                          %strong> Ancho:
+                          175 m²
+                        %li
+                          %strong Alto:
+                          195 m²
+                        %li
+                          %strong C.P:
+                          33131
+                    .res_r
+                      %p.price
+                        %strong $1,850,000
+                      .rating
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    .res_opt
+                      .cat En Renta
+                      %ul
+                        %li.icnDetails
+                          %a{:href => "inmueble.html", :title => "Visitar inmueble"}
+                            %strong Visitar inmueble
+                        %li.icnAlerts
+                          %a{:href => "#", :title => "Alertas"} Recibir alertas
+                        %li.icnSave
+                          %a{:href => "#", :title => "Salvar"} Salvar
+                        %li.icnShare
+                          %a{:href => "#", :title => "Compartir"} Compartir
+                  / /resultado
+                  / resultado
+                  %li
+                    %h2
+                      %a{:href => "#"} puertas del tule 251
+                    .tmb.res_l
+                      %a{:href => "#"}
+                        %img{:alt => "house", :height => "77", :src => "pix/temp/house.gif", :width => "77"}/
+                    .res_m
+                      %p
+                        3 baños — 3 habitaciones
+                        %br/
+                        Para una familia sencilla
+                    .res_rdetails
+                      %ul
+                        %li
+                          %strong Antigüedad:
+                          4 años
+                        %li
+                          %strong> Ancho:
+                          175 m²
+                        %li
+                          %strong Alto:
+                          195 m²
+                        %li
+                          %strong C.P:
+                          33131
+                    .res_r
+                      %p.price
+                        %strong $1,850,000
+                      .rating
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    .res_opt
+                      .cat En Renta
+                      %ul
+                        %li.icnDetails
+                          %a{:href => "inmueble.html", :title => "Visitar inmueble"}
+                            %strong Visitar inmueble
+                        %li.icnAlerts
+                          %a{:href => "#", :title => "Alertas"} Recibir alertas
+                        %li.icnSave
+                          %a{:href => "#", :title => "Salvar"} Salvar
+                        %li.icnShare
+                          %a{:href => "#", :title => "Compartir"} Compartir
+                  / /resultado
+                  / resultado
+                  %li
+                    %h2
+                      %a{:href => "#"} montera 1676
+                    .tmb.res_l
+                      %a.iconVideo{:href => "#", :title => "Video"} Video
+                      %a{:href => "#"}
+                        %img{:alt => "house", :height => "77", :src => "pix/temp/house.gif", :width => "77"}/
+                    .res_m
+                      %p
+                        3 baños — 3 habitaciones
+                        %br/
+                        Para una familia sencilla
+                    .res_rdetails
+                      %ul
+                        %li
+                          %strong Antigüedad:
+                          4 años
+                        %li
+                          %strong> Ancho:
+                          175 m²
+                        %li
+                          %strong Alto:
+                          195 m²
+                        %li
+                          %strong C.P:
+                          33131
+                    .res_r
+                      %p.price
+                        %strong $1,850,000
+                      .rating
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                        %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    .res_opt
+                      .cat En Venta
+                      %ul
+                        %li.icnDetails
+                          %a{:href => "inmueble.html", :title => "Visitar inmueble"}
+                            %strong Visitar inmueble
+                        %li.icnAlerts
+                          %a{:href => "#", :title => "Alertas"} Recibir alertas
+                        %li.icnSave
+                          %a{:href => "#", :title => "Salvar"} Salvar
+                        %li.icnShare
+                          %a{:href => "#", :title => "Compartir"} Compartir
+                  / /resultado
+                %ul#pages
+                  %li.off « Anterior
+                  %li.current 1
+                  %li
+                    %a{:href => "#"} 2
+                  %li
+                    %a{:href => "#"} 3
+                  %li
+                    %a{:href => "#"} 4
+                  %li
+                    %a{:href => "#"} 5
+                  %li
+                    %a{:href => "#"} 6
+                  %li
+                    %a{:href => "#"} 7
+                  %li
+                    %a{:href => "#"} 8
+                  %li
+                    %a{:href => "#"} 9
+                  %li
+                    %a{:href => "#"} 10
+                  %li
+                    %a{:href => "#"} Siguiente »
+                %p.mar10.ads728x90
+                  %a{:href => "#"}
+                    %img{:alt => "", :height => "90", :src => "pix/temp/728x90.gif", :width => "728"}/
+              / /INMUEBLES
+            / / LEFT
+            / RIGHT
+            .floatR
+              %p
+                %img{:alt => "160x600", :height => "600", :src => "pix/temp/160x600.gif", :width => "160"}/
+            / / RIGHT
+          / / split DASH
+        / /content DASH
+      / wrapper
+      %br.clear/
+      .push
+    #footer.foot
+      .wrap
+        / footer right
+        .floatR
+          %a#aUp{:href => "#top", :title => "Subir"} Subir
+          %a#logoFoot{:href => "#", :title => "Volver a la portada de habitaclick"} habitaclick
+          %strong
+            Copyright © 2008
+            %br/
+            GlobexCorporaciones.
+        / /footer right
+        / footer left
+        .floatL
+          .footSec
+            %h3 Usuarios
+            %ul
+              %li
+                %a{:href => "#", :title => "Inicio"} Inicio
+              %li
+                %a{:href => "#", :title => "Ventas"} Ventas
+              %li
+                %a{:href => "#", :title => "Rentas"} Rentas
+              %li
+                %a{:href => "#", :title => "Mi Habitaclick"} Mi Habitaclick
+              %li
+                %a{:href => "#", :title => "Ayuda"} Ayuda
+              %li
+                %a{:href => "#", :title => "Políticas de Privacidad"} Políticas de Privacidad
+          .footSec
+            %h3 Habitaclick
+            %ul
+              %li
+                %a{:href => "#", :title => "Acerca de"} Acerca de
+              %li
+                %a{:href => "#", :title => "Contacto"} Contacto
+              %li
+                %a{:href => "#", :title => "Inmobiliarias"} Inmobiliarias
+              %li
+                %a{:href => "#", :title => "Términos"} Términos
+              %li
+                %a{:href => "#", :title => "Feedback"} Feedback
+              %li
+                %a{:href => "#", :title => "Publicidad"} Publicidad
+              %li
+                %a{:href => "#", :title => "Empleos"} Empleos
+        / /footer left

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title></title>
+
+
+	<script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS.css">	
+</head>
+
+<body>
+
+<!-- trigger elements -->
+<div id="triggers">
+	<img src="http://farm4.static.flickr.com/3651/3445879840_7ca4b491e9_m.jpg" rel="#mies1">
+	<img src="http://farm4.static.flickr.com/3346/3449388113_71a06b8548_m.jpg" rel="#mies2">
+</div>
+
+<!-- overlays -->
+<div class="simple_overlay" id="mies1"><a class="close"></a>
+	<img src="http://farm4.static.flickr.com/3651/3445879840_7ca4b491e9.jpg">
+
+	
+</div>
+
+<div class="simple_overlay" id="mies2"><a class="close"></a>
+	<img src="http://farm4.static.flickr.com/3346/3449388113_71a06b8548.jpg">
+</div>
+
+<script>
+// What is $(document).ready ? See: http://flowplayer.org/tools/documentation/basics.html#document_ready
+$(document).ready(function() {
+
+
+
+$("img[rel]").overlay();
+});
+</script>
+
+
+
+
+
+
+</body></html>

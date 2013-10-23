@@ -1,0 +1,12 @@
+%h2
+  Ingresa a tu cuenta
+  %strong habitaclick
+%form#loginform.boxform{:action => "", :method => "post", :name => "loginform"}
+  %p
+    %label{:for => "email"} E-mail
+    %input#email{:name => "email", :type => "text"}/
+  %p
+    %label{:for => "pass"} Contraseña
+    %input#pass{:name => "pass", :type => "password"}/
+  %p.center
+    %input#btnLogin.btn{:name => "btnLogin", :type => "submit", :value => "Ingresar"}/

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title habitaclick.com
+    %link{:href => "stylesheets/style.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "js/jquery-1.2.6.pack.js", :type => "text/javascript"}
+    %script{:src => "js/facebox.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.idTabs.min.js", :type => "text/javascript"}
+    %script{:src => "js/hc.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.tablesorter.min.js", :type => "text/javascript"}
+    :javascript
+      $(document).ready(function() { 
+          $("#tablePublished").tablesorter({ 
+              headers: { 
+                  4: { 
+                      sorter: false 
+                  }, 
+              } 
+          }); 
+      	
+      	    $("#tableSaved").tablesorter({ 
+              headers: { 
+                  4: { 
+                      sorter: false 
+                  }, 
+              } 
+          }); 
+      	
+      $("#tableQuestions").tablesorter({ 
+              headers: { 
+                  3: { 
+                      sorter: false 
+                  }, 
+              } 
+          }); 
+      	
+      	
+      });
+  %body
+    #container.wrap
+      / header
+      #header
+        / topMenu
+        #topMenu
+          %ul
+            %li
+              Bienvenido:
+              %strong Mauricio
+            %li
+              %a{:href => "mihabitaclick.html", :title => "Ir a mi habitaclick"} Ir a mi habitaclick
+            %li
+              %a{:href => "logout.html", :title => "Salir de esta cuenta"} Salir de esta cuenta
+        / /topMenu
+        #mainMenu
+          %ul
+            %li
+              %a{:href => "home.html", :title => "Inicio"}
+                %span Inicio
+            %li
+              %a{:href => "inmuebles.html", :title => "Inmuebles"}
+                %span Inmuebles
+            %li
+              %a{:href => "publicar.html", :title => "Publicar"}
+                %span Publicar
+            %li
+              %a{:href => "destacados.html", :title => "Destacados"}
+                %span Destacados
+        %h1
+          %a{:href => "home.html", :title => "habitaclick.com"} habitaclick.com
+      / /header
+      / wrapper
+      #wrapper
+        / path
+        %ul#iconOptions
+          %li.iconAddProperty
+            %a{:href => "agregar_inmueble.html"} Agregar inmueble
+          %li.iconUpdateProfile
+            %a{:href => "perfil.html"} Actualizar mi perfil
+          %li.iconLogout
+            %a{:href => "logout.html"} Salir de esta cuenta
+        .path
+          %a{:href => "home.html", :title => ""} Inicio
+          \»
+          %a{:href => "#"} Mi habitaclick
+          \» Nombre de usuario
+        / / path
+        / content DASH
+        #contentDash
+          .avatar
+            %a{:href => "#"}
+              %img{:alt => "Nombre de usuario", :height => "48", :src => "pix/iface/small_default_photo.gif", :width => "48"}/
+          %h2
+            %a{:href => "#"} Mi habitaclick
+            %small
+              Bienvenido
+              %strong nombre de usuario
+          / split DASH
+          #splitDash.split
+            / LEFT
+            .floatL
+              / mediaSide
+              #dashTabs
+                / list
+                %ul#dashList
+                  %li#dash_published
+                    %a.selected{:href => "#dashPublished", :title => "Inmuebles Publicados"} Inmuebles Publicados
+                  %li#dash_saved
+                    %a{:href => "#dashSaved", :title => "Inmuebles Guardados"} Inmuebles Guardados
+                  %li#dash_questions
+                    %a{:href => "#dashQuestions", :title => "Preguntas"} Preguntas
+                / / list
+                / dash_published
+                #dashPublished.dashSec
+                  %table#tablePublished.wideTable.cleanT{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %caption
+                      %strong 5
+                      Inmuebles publicados
+                    %thead
+                      %tr
+                        %th{:width => "10"} #
+                        %th{:width => "430"} Dirección
+                        %th{:width => "140"} Ciudad
+                        %th{:width => "120"} Estado
+                        %th.thActions{:width => "80"} Acciones
+                    %tbody
+                      / inmueble
+                      %tr
+                        %td 15
+                        %td puertas del tule
+                        %td zapopan
+                        %td Jalisco
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 5
+                        %td Ramon del Valle 568
+                        %td zapopan
+                        %td Jalisco
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 14
+                        %td charles Dickens 280
+                        %td Condesa
+                        %td Distrito Federal
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 40
+                        %td Noche Larga
+                        %td Lorem
+                        %td Ipsum
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 7
+                        %td puertas del tule
+                        %td zapopan
+                        %td Jalisco
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                / /dash_published
+                / dashSaved
+                #dashSaved.dashSec
+                  %table#tableSaved.wideTable.cleanT{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %caption
+                      %strong 3
+                      Inmuebles guardados
+                    %thead
+                      %tr
+                        %th{:width => "10"} #
+                        %th{:width => "430"} Dirección
+                        %th{:width => "140"} Ciudad
+                        %th{:width => "120"} Estado
+                        %th.thActions{:width => "80"} Acciones
+                    %tbody
+                      / inmueble
+                      %tr
+                        %td 15
+                        %td puertas del tule
+                        %td zapopan
+                        %td Jalisco
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 40
+                        %td Noche Larga
+                        %td Lorem
+                        %td Ipsum
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 7
+                        %td puertas del tule
+                        %td zapopan
+                        %td Jalisco
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                / /dashSaved
+                / dashQuestions
+                #dashQuestions.dashSec
+                  %table#tableQuestions.wideTable.cleanT{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+                    %caption
+                      %strong 3
+                      Preguntas realizadas
+                    %thead
+                      %tr
+                        %th{:width => "10"} #
+                        %th{:width => "60%"} Pregunta
+                        %th{:width => "15%"} hecha por
+                        %th.thActions{:width => "60"} Acciones
+                    %tbody
+                      / inmueble
+                      %tr
+                        %td 15
+                        %td Lorem ipsum dolor sit amet....
+                        %td usuario 01
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnReply{:href => "#", :title => "Responder"} Responder
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 40
+                        %td Hello world!...
+                        %td Roger Rabbit
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnReply{:href => "#", :title => "Responder"} Responder
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                      / inmueble
+                      %tr
+                        %td 7
+                        %td Donec neque. Sed neque libero, facilisis id, ornare...
+                        %td Admin
+                        %td
+                          %a.icnRemove{:href => "#", :title => "Borrar este inmueble"} Borrar
+                          %a.icnReply{:href => "#", :title => "Responder"} Responder
+                          %a.icnView{:href => "inmueble.html", :title => "Visitar inmueble"} Ver
+                      / inmueble
+                / /dashQuestions
+                :javascript
+                  $("#dashList").idTabs(); 
+              / /mediaList
+            / / LEFT
+            / RIGHT
+            .floatR
+              %p
+                %img{:alt => "160x600", :height => "600", :src => "pix/temp/160x600.gif", :width => "160"}/
+            / / RIGHT
+          / / split DASH
+        / /content DASH
+      / wrapper
+      %br.clear/
+      .push
+    #footer.foot
+      .wrap
+        / footer right
+        .floatR
+          %a#aUp{:href => "#top", :title => "Subir"} Subir
+          %a#logoFoot{:href => "#", :title => "Volver a la portada de habitaclick"} habitaclick
+          %strong
+            Copyright © 2008
+            %br/
+            GlobexCorporaciones.
+        / /footer right
+        / footer left
+        .floatL
+          .footSec
+            %h3 Usuarios
+            %ul
+              %li
+                %a{:href => "#", :title => "Inicio"} Inicio
+              %li
+                %a{:href => "#", :title => "Ventas"} Ventas
+              %li
+                %a{:href => "#", :title => "Rentas"} Rentas
+              %li
+                %a{:href => "#", :title => "Mi Habitaclick"} Mi Habitaclick
+              %li
+                %a{:href => "#", :title => "Ayuda"} Ayuda
+              %li
+                %a{:href => "#", :title => "Políticas de Privacidad"} Políticas de Privacidad
+          .footSec
+            %h3 Habitaclick
+            %ul
+              %li
+                %a{:href => "#", :title => "Acerca de"} Acerca de
+              %li
+                %a{:href => "#", :title => "Contacto"} Contacto
+              %li
+                %a{:href => "#", :title => "Inmobiliarias"} Inmobiliarias
+              %li
+                %a{:href => "#", :title => "Términos"} Términos
+              %li
+                %a{:href => "#", :title => "Feedback"} Feedback
+              %li
+                %a{:href => "#", :title => "Publicidad"} Publicidad
+              %li
+                %a{:href => "#", :title => "Empleos"} Empleos
+        / /footer left

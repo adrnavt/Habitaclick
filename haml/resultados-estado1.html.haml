@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title habitaclick.com
+    %link{:href => "stylesheets/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "js/jquery-1.2.6.pack.js", :type => "text/javascript"}
+    %script{:src => "js/facebox.js", :type => "text/javascript"}
+    %script{:src => "js/chili-1.7.pack.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.idTabs.min.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.easing.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.accordion.js", :type => "text/javascript"}
+    %script{:src => "js/hc.js", :type => "text/javascript"}
+    :javascript
+	jQuery().ready(function(){
+		jQuery('#list1b').accordion({
+			autoheight: false
+		});
+		var accordions = jQuery('#list1b');
+		
+		
+		
+		//expand_js collapse_js
+		
+		$('#expand_js').click(function(e){
+		
+			
+			if( $('#map').hasClass('big') ){
+				$(this).removeClass('expand_more');
+				$(this).addClass('expand_max');
+				$('#collapse_js').removeClass('collapse_more');
+				$('#collapse_js').addClass('collapse_max');
+				
+				$('#map').removeClass('big');
+				$('#map').addClass('toBig');
+			}else{
+				$(this).removeClass('expand_normal');
+				$(this).addClass('expand_more');
+				
+				$('#collapse_js').removeClass('collapse_normal');
+				$('#collapse_js').addClass('collapse_more');
+				
+				$('#map').addClass('big');
+			}
+
+		});
+		$('#collapse_js').click(function(){
+			if( $('#map').hasClass('big') ){
+				$('#map').removeClass('big');
+				
+				$(this).removeClass('collapse_more');
+				$(this).addClass('collapse_normal');
+				$('#expand_js').removeClass('expand_more');
+				$('#expand_js').addClass('expand_normal');
+				
+			}else if( $('#map').hasClass('toBig') ){
+				
+				$(this).removeClass('collapse_max');
+				$(this).addClass('collapse_more');
+				$('#expand_js').removeClass('expand_max');
+				$('#expand_js').addClass('expand_more');
+			
+				$('#map').removeClass('toBig');
+				$('#map').addClass('big');
+			}
+		});
+		
+	});
+function myToggle(obj,e){
+	obj.className = ( obj.className == 'activedetails' ) ? '' : 'activedetails'; 
+	document.getElementById(e).className = ( obj.className == 'activedetails' ) ? 'showdetails' : 'hiddedetails';  
+}	
+	
+  %body
+    #container.wrap
+      / header
+      #header
+        / topMenu
+        #topMenu
+          %ul
+            %li
+              %a{:href => "registro.html", :title => "Regístrate"} Regístrate
+            %li
+              %a{:href => "contrasena.html", :title => "¿Olvidaste tu contraseña?"} ¿Olvidaste tu contraseña?
+            %li
+              %a{:href => "login.html", :rel => "facebox", :title => "Ingresar"} Ingresar
+        / /topMenu
+        #mainMenu
+          %ul
+            %li
+              %a{:href => "home.html", :title => "Inicio"}
+                %span Inicio
+            %li.current
+              %a{:href => "inmuebles.html", :title => "Inmuebles"}
+                %span Inmuebles
+            %li
+              %a{:href => "publicar.html", :title => "Publicar"}
+                %span Publicar
+            %li
+              %a{:href => "destacados.html", :title => "Destacados"}
+                %span Destacados
+        %h1
+          %a{:href => "home.html", :title => "habitaclick.com"} habitaclick.com
+      / /header
+      / wrapper
+      #wrapper
+        / path
+        %ul#iconOptions
+          %li.iconAlerts
+            %a{:href => "#"} Alertas
+          %li.iconRss
+            %a{:href => "#"} RSS
+        .path
+          Encontramos
+          %strong 5 inmuebles
+          para
+          %strong vender
+          en
+          %strong zapopan jalisco
+          \—
+          %input#ftdsites{:name => "ftdsites", :type => "checkbox"}/
+          %label{:for => "ftdsites"} Mostrar solo sitios de interés
+        / / path
+        / content in 3 cols
+        #content3cols.split
+          / left
+          .colL
+            .sidebar
+              %h2 Buscar
+              .padd5
+                %form#side_srchform{:action => "", :method => "post", :name => "side_srchform"}
+                  %p
+                    %label{:for => "srch_input"} Encuentra un Inmueble en
+                    %input#srch_input{:name => "srch_input", :onblur => "if (this.value == '') {this.value = 'Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir';}", :onfocus => "if (this.value == 'Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir') {this.value = '';}", :type => "text", :value => "Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir"}/
+                  %p
+                    %label{:for => "type"} Tipo de inmueble
+                    %select#type{:name => "type"}
+                      %option{:value => "0"} El que sea
+                      %option{:value => "1"} Casa
+                      %option{:value => "2"} Terreno
+                      %option{:value => "3"} Local Comercial
+                      %option{:value => "4"} Bodega
+                      %option{:value => "5"} Tiempo Compartido
+                      %option{:value => "6"} Loft
+                      %option{:value => "7"} Departamento/condo
+                      %option{:value => "8"} Rancho/Granja
+                  %p.center
+                    %label{:for => "chk_renta"} Renta
+                    %input#chk_renta{:name => "chk_renta", :type => "checkbox"}/
+                    %label{:for => "chk_venta"} Venta
+                    %input#chk_venta{:name => "chk_venta", :type => "checkbox"}/
+                    %label{:for => "chk_traspaso"} Traspaso
+                    %input#chk_traspaso{:name => "chk_traspaso", :type => "checkbox"}/
+                  %p.center
+                    %input#submit{:name => "submit", :src => "pix/search/btnSearch_side.gif", :type => "image", :value => "Buscar"}/
+                  %h3 Filtra tu búsqueda
+                  #list1b.filter
+                    %a Precio:
+                    %div
+                      %p
+                        %label{:for => "price"} Desde
+                        %select#price{:name => "price"}
+                          %option{:value => "0"} El que sea
+                          %option{:value => "100000"} 100 mil
+                          %option{:value => "200000"} 200 mil
+                          %option{:value => "300000"} 300 mil
+                          %option{:value => "400000"} 400 mil
+                          %option{:value => "500000"} 500 mil
+                          %option{:value => "600000"} 600 mil
+                          %option{:value => "700000"} 700 mil
+                          %option{:value => "800000"} 800 mil
+                          %option{:value => "900000"} 900 mil
+                          %option{:value => "1000000"} 1 millón
+                          %option{:value => "2000000"} 2 millones
+                          %option{:value => "3000000"} 3 millones
+                          %option{:value => "4000000"} 4 millones
+                          %option{:value => "5000000"} 5 millones
+                      %p
+                        %label{:for => "price2"} Hasta
+                        %select#price2{:name => "price2"}
+                          %option{:value => "0"} El que sea
+                          %option{:value => "100000"} 100 mil
+                          %option{:value => "200000"} 200 mil
+                          %option{:value => "300000"} 300 mil
+                          %option{:value => "400000"} 400 mil
+                          %option{:value => "500000"} 500 mil
+                          %option{:value => "600000"} 600 mil
+                          %option{:value => "700000"} 700 mil
+                          %option{:value => "800000"} 800 mil
+                          %option{:value => "900000"} 900 mil
+                          %option{:value => "1000000"} 1 millón
+                          %option{:value => "2000000"} 2 millones
+                          %option{:value => "3000000"} 3 millones
+                          %option{:value => "4000000"} 4 millones
+                          %option{:value => "5000000"} 5 millones
+                    %a Habitaciones:
+                    %div
+                      %p
+                        %label{:for => "rooms"} # de Cuartos
+                        %select#rooms{:name => "rooms"}
+                          %option{:value => "0"} Los que sean
+                          %option{:value => "1"} 1
+                          %option{:value => "2"} 2
+                          %option{:value => "3"} 3
+                          %option{:value => "4"} + de 4
+                    %a Baños:
+                    %div
+                      %p
+                        %label{:for => "baths"} # de Baños
+                        %select#baths{:name => "baths"}
+                          %option{:value => "0"} Los que sean
+                          %option{:value => "1"} 1
+                          %option{:value => "2"} 2
+                          %option{:value => "3"} 3
+                          %option{:value => "4"} + de 4
+                %p.center
+                  %a{:href => "#"}
+                    %img{:alt => "160x600", :height => "600", :src => "pix/temp/160x600.gif", :width => "160"}/
+          / / left
+          / middle
+          .colM
+            .resHdr
+              %ul.quickNav
+                %li.btnPrev
+                  %a{:href => "#", :title => "Anterior"} Anterior
+                %li.btnNext
+                  %a{:href => "#", :title => "Siguiente"} Siguiente
+              %form#sort_form{:action => "", :method => "post", :name => "sort_form"}
+                %label{:for => "order"} Ordenar por
+                %select#order{:name => "order"}
+                  %option Ordenar por
+                  %option Precio
+                  %option Nombre
+                  %option Ranking
+                  %option N° de baños
+                  %option N° de habitaciones
+                  %option Antigüedad
+                  %option Dimensiones
+                %label{:for => "pagenumber"} Página
+                %input#pagenumber{:name => "pagenumber", :type => "text", :value => "1"}/
+                de 1
+            %ul#results
+              / resultado
+              %li
+                %h2
+                  %a{:href => "#"} circunvalación oriente 160
+                .tmb.res_l
+                  %a.iconVideo{:href => "#", :title => "Video"} Video
+                  %a{:href => "#"}
+                    %img{:alt => "house", :height => "77", :src => "pix/temp/house.gif", :width => "77"}/
+                .res_m
+                  %p
+                    3 baños — 3 habitaciones
+                    %br/
+                    Para una familia sencilla
+                  %p.price
+                    %strong $1,850,000
+                  .rating
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                .res_r
+                  %span.featured Anuncio destacado
+                  %p
+                    %a{:href => "#", :title => "keyes.com"} keyes.com
+                    %br/
+                    %img{:alt => "keyes", :height => "32", :src => "pix/temp/keyes.gif", :width => "70"}/
+                .res_opt
+                  .cat En Venta
+                  %ul
+                    %li.icnDetails
+                      %a{:href => "#", :onclick => "myToggle(this,'mydetails1'); return false;", :title => "Detalles"}
+                        %strong Ver detalles
+                    %li.icnAlerts
+                      %a{:href => "#", :title => "Alertas"} Recibir alertas
+                    %li.icnSave
+                      %a{:href => "#", :title => "Salvar"} Salvar
+                    %li.icnShare
+                      %a{:href => "#", :title => "Compartir"} Compartir
+                #mydetails1.details.hiddedetails
+                  .gmap
+                    %img{:alt => "", :height => "110", :src => "pix/iface/big_nomap.gif", :width => "150"}/
+                  %ul
+                    %li
+                      %strong Inmobiliaria:
+                      %a{:href => "#", :title => "keyes.com"} keyes.com
+                    %li
+                      %strong Tipo:
+                      Venta
+                    %li
+                      %strong Antigüedad:
+                      4 años
+                    %li
+                      %strong> Ancho:
+                      175 m²
+                    %li
+                      %strong Alto:
+                      195 m²
+                    %li
+                      %strong C.P:
+                      33131
+              / /resultado
+              / resultado
+              %li
+                %h2
+                  %a{:href => "#"} Santa Fe 11
+                .tmb.res_l
+                  %a{:href => "#"}
+                    %img{:alt => "house", :height => "77", :src => "pix/iface/default.jpg", :width => "77"}/
+                .res_m
+                  %p
+                    3 baños — 3 habitaciones
+                    %br/
+                    Para una familia sencilla
+                  %p.price
+                    %strong $1,850,000
+                  .rating
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                .res_r
+                  %p
+                    %a{:href => "#", :title => "searchsunnyisles.com"} searchsunnyisles.com
+                    %br/
+                .res_opt
+                  .cat En Renta
+                  %ul
+                    %li.icnDetails
+                      %a{:href => "#", :onclick => "myToggle(this,'mydetails2'); return false;", :title => "Detalles"}
+                        %strong Ver detalles
+                    %li.icnAlerts
+                      %a{:href => "#", :title => "Alertas"} Recibir alertas
+                    %li.icnSave
+                      %a{:href => "#", :title => "Salvar"} Salvar
+                    %li.icnShare
+                      %a{:href => "#", :title => "Compartir"} Compartir
+                #mydetails2.details.hiddedetails
+                  .gmap
+                    %img{:alt => "", :height => "110", :src => "pix/temp/mapsmall.jpg", :width => "150"}/
+                  %ul
+                    %li
+                      %strong Inmobiliaria:
+                      %a{:href => "#", :title => "keyes.com"} keyes.com
+                    %li
+                      %strong Tipo:
+                      Venta
+                    %li
+                      %strong Antigüedad:
+                      4 años
+                    %li
+                      %strong> Ancho:
+                      175 m²
+                    %li
+                      %strong Alto:
+                      195 m²
+                    %li
+                      %strong C.P:
+                      33131
+              / /resultado
+              / resultado
+              %li
+                %h2
+                  %a{:href => "#"} puertas del tule 251
+                .tmb.res_l
+                  %a{:href => "#"}
+                    %img{:alt => "house", :height => "77", :src => "pix/temp/house.gif", :width => "77"}/
+                .res_m
+                  %p
+                    3 baños — 3 habitaciones
+                    %br/
+                    Para una familia sencilla
+                  %p.price
+                    %strong $1,850,000
+                  .rating
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                .res_r
+                  %p
+                    %a{:href => "#", :title => "ileanasellsmiami.com"} ileanasellsmiami.com
+                    %br/
+                .res_opt
+                  .cat En Venta
+                  %ul
+                    %li.icnDetails
+                      %a{:href => "#", :onclick => "myToggle(this,'mydetails3'); return false;", :title => "Detalles"}
+                        %strong Ver detalles
+                    %li.icnAlerts
+                      %a{:href => "#", :title => "Alertas"} Recibir alertas
+                    %li.icnRemove
+                      %a{:href => "#", :title => "Remover"} Remover
+                    %li.icnShare
+                      %a{:href => "#", :title => "Compartir"} Compartir
+                #mydetails3.details.hiddedetails
+                  .gmap
+                    %img{:alt => "", :height => "110", :src => "pix/temp/mapsmall.jpg", :width => "150"}/
+                  %ul
+                    %li
+                      %strong Inmobiliaria:
+                      %a{:href => "#", :title => "keyes.com"} keyes.com
+                    %li
+                      %strong Tipo:
+                      Venta
+                    %li
+                      %strong Antigüedad:
+                      4 años
+                    %li
+                      %strong> Ancho:
+                      175 m²
+                    %li
+                      %strong Alto:
+                      195 m²
+                    %li
+                      %strong C.P:
+                      33131
+              / /resultado
+              / resultado
+              %li
+                %h2
+                  %a{:href => "#"} montera 1676
+                .tmb.res_l
+                  %a.iconVideo{:href => "#", :title => "Video"} Video
+                  %a{:href => "#"}
+                    %img{:alt => "house", :height => "77", :src => "pix/temp/house.gif", :width => "77"}/
+                .res_m
+                  %p
+                    3 baños — 3 habitaciones
+                    %br/
+                    Para una familia sencilla
+                  %p.price
+                    %strong $1,850,000
+                  .rating
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_full.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_half.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                    %img{:alt => "", :height => "14", :src => "pix/icons/rate_off.gif", :width => "14"}/
+                .res_r
+                  %p
+                    %a{:href => "#", :title => "keyes.com"} keyes.com
+                    %br/
+                .res_opt
+                  .cat Traspaso
+                  %ul
+                    %li.icnDetails
+                      %a{:href => "#", :onclick => "myToggle(this,'mydetails4'); return false;", :title => "Detalles"}
+                        %strong Ver detalles
+                    %li.icnAlerts
+                      %a{:href => "#", :title => "Alertas"} Recibir alertas
+                    %li.icnSave
+                      %a{:href => "#", :title => "Salvar"} Salvar
+                    %li.icnShare
+                      %a{:href => "#", :title => "Compartir"} Compartir
+                #mydetails4.details.hiddedetails
+                  .gmap
+                    %img{:alt => "", :height => "110", :src => "pix/temp/mapsmall.jpg", :width => "150"}/
+                  %ul
+                    %li
+                      %strong Inmobiliaria:
+                      %a{:href => "#", :title => "keyes.com"} keyes.com
+                    %li
+                      %strong Tipo:
+                      Venta
+                    %li
+                      %strong Antigüedad:
+                      4 años
+                    %li
+                      %strong> Ancho:
+                      175 m²
+                    %li
+                      %strong Alto:
+                      195 m²
+                    %li
+                      %strong C.P:
+                      33131
+              / /resultado
+            %ul#pages
+              %li.off « Anterior
+              %li.current 1
+              %li
+                %a{:href => "#"} 2
+              %li
+                %a{:href => "#"} 3
+              %li
+                %a{:href => "#"} 4
+              %li
+                %a{:href => "#"} 5
+              %li
+                %a{:href => "#"} 6
+              %li
+                %a{:href => "#"} 7
+              %li
+                %a{:href => "#"} 8
+              %li
+                %a{:href => "#"} 9
+              %li
+                %a{:href => "#"} 10
+              %li
+                %a{:href => "#"} Siguiente »
+            %p.mar10
+              :javascript
+                              %script{:src => "http://pagead2.googlesyndication.com/pagead/show_ads.js", :type => "text/javascript"}
+          / /middle
+          / right
+          .colR
+            .sidebar
+              %ul.mapControl
+                %li.expand
+                  %a#expand_js.expand_js{:href => "#", :title => "Expandir Mapa"} Expandir Mapa
+                %li.collapse
+                  %a#collapse_js.collapse_js{:href => "#", :title => "Colapsar Mapa"} Colapsar Mapa
+              %h2 GMap
+              #map.big
+                %img{:alt => "gmap", :height => "510", :src => "pix/temp/bigmap.gif", :width => "778"}/
+              #sideAds
+                :javascript
+                                  %script{:src => "http://pagead2.googlesyndication.com/pagead/show_ads.js", :type => "text/javascript"}
+            / mediaSide
+            #mediaSide
+              / list
+              %ul#mediaList
+                %li#media_pictures
+                  %a.selected{:href => "#medPictures", :title => "Fotos"} Fotos
+                %li#media_video
+                  %a{:href => "#medVideo", :title => "Video"} Video
+              / / list
+              / medPictures
+              #medPictures.mediaSec
+                %p
+                  %a{:href => "pix/temp/casa.jpg", :rel => "facebox"}
+                    %img{:alt => "", :height => "70", :src => "pix/temp/mediapic01.gif", :width => "70"}/
+                  %a{:href => "pix/temp/casa.jpg", :rel => "facebox"}
+                    %img{:alt => "", :height => "70", :src => "pix/temp/mediapic02.gif", :width => "70"}/
+                  %a{:href => "pix/temp/panorama.jpg", :rel => "facebox"}
+                    %img{:alt => "", :height => "70", :src => "pix/temp/mediapic03.gif", :width => "70"}/
+                  %a{:href => "pix/temp/casa.jpg", :rel => "facebox"}
+                    %img{:alt => "", :height => "70", :src => "pix/temp/mediapic01.gif", :width => "70"}/
+                  %a{:href => "pix/temp/panorama.jpg", :rel => "facebox"}
+                    %img{:alt => "", :height => "70", :src => "pix/temp/mediapic02.gif", :width => "70"}/
+                  %a{:href => "pix/temp/casa.jpg", :rel => "facebox"}
+                    %img{:alt => "", :height => "70", :src => "pix/temp/mediapic03.gif", :width => "70"}/
+              / /medPictures
+              / medVideo
+              #medVideo.mediaSec
+                %object{:data => "media/media.swf", :height => "250", :type => "application/x-shockwave-flash", :width => "298"}
+                  %param{:name => "movie", :value => "media/media.swf"}/
+                  %param{:name => "bgcolor", :value => "#FFF"}/
+                  %param{:name => "wmode", :value => "transparent"}/
+                  %a{:href => "http://www.macromedia.com/shockwave/download/alternates/", :title => "flash player"}
+                    %img{:alt => "Descargar Flash Player", :height => "294", :src => "pix/temp/videoref.jpg", :width => "294"}/
+              / /medVideo
+              :javascript
+                $("#mediaList").idTabs(); 
+            / /mediaList
+          / /right
+        / /content in 3 cols
+      / wrapper
+      %br.clear/
+      .push
+    #footer.foot
+      .wrap
+        / footer right
+        .floatR
+          %a#aUp{:href => "#top", :title => "Subir"} Subir
+          %a#logoFoot{:href => "#", :title => "Volver a la portada de habitaclick"} habitaclick
+          %strong
+            Copyright © 2008
+            %br/
+            GlobexCorporaciones.
+        / /footer right
+        / footer left
+        .floatL
+          .footSec
+            %h3 Usuarios
+            %ul
+              %li
+                %a{:href => "#", :title => "Inicio"} Inicio
+              %li
+                %a{:href => "#", :title => "Ventas"} Ventas
+              %li
+                %a{:href => "#", :title => "Rentas"} Rentas
+              %li
+                %a{:href => "#", :title => "Mi Habitaclick"} Mi Habitaclick
+              %li
+                %a{:href => "#", :title => "Ayuda"} Ayuda
+              %li
+                %a{:href => "#", :title => "Políticas de Privacidad"} Políticas de Privacidad
+          .footSec
+            %h3 Habitaclick
+            %ul
+              %li
+                %a{:href => "#", :title => "Acerca de"} Acerca de
+              %li
+                %a{:href => "#", :title => "Contacto"} Contacto
+              %li
+                %a{:href => "#", :title => "Inmobiliarias"} Inmobiliarias
+              %li
+                %a{:href => "#", :title => "Términos"} Términos
+              %li
+                %a{:href => "#", :title => "Feedback"} Feedback
+              %li
+                %a{:href => "#", :title => "Publicidad"} Publicidad
+              %li
+                %a{:href => "#", :title => "Empleos"} Empleos
+        / /footer left

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+%html
+  
+%head
+  %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+  %title habitaclick.com
+  %link{:href => "screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+  %script{:src => "js/jquery-1.2.6.pack.js", :type => "text/javascript"}
+  %script{:src => "js/facebox.js", :type => "text/javascript"}
+  %script{:src => "js/jquery.idTabs.min.js", :type => "text/javascript"}
+  %script{:src => "js/hc.js", :type => "text/javascript"}
+  %script{:src => "js/jquery.tablesorter.min.js", :type => "text/javascript"}
+  :javascript
+    $(document).ready(function() { 
+        $("#tablePublished").tablesorter({ 
+            headers: { 
+                4: { 
+                    sorter: false 
+                }, 
+            } 
+        }); 
+    	
+    	    $("#tableSaved").tablesorter({ 
+            headers: { 
+                4: { 
+                    sorter: false 
+                }, 
+            } 
+        }); 
+    	
+    $("#tableQuestions").tablesorter({ 
+            headers: { 
+                3: { 
+                    sorter: false 
+                }, 
+            } 
+        }); 
+    	
+    	
+    });
+
+
+%body
+  #container.wrap
+    / header
+    #header
+      / topMenu
+      #topMenu
+        %ul
+          %li
+            Bienvenido:
+            %strong Mauricio
+          %li
+            %a{:href => "mihabitaclick.html", :title => "Ir a mi habitaclick"} Ir a mi habitaclick
+          %li
+            %a{:href => "logout.html", :title => "Salir de esta cuenta"} Salir de esta cuenta
+      / /topMenu
+      #mainMenu
+        %ul
+          %li
+            %a{:href => "home.html", :title => "Inicio"}
+              %span Inicio
+          %li
+            %a{:href => "inmuebles.html", :title => "Inmuebles"}
+              %span Inmuebles
+          %li.current
+            %a{:href => "publicar.html", :title => "Publicar"}
+              %span Publicar
+          %li
+            %a{:href => "destacados.html", :title => "Destacados"}
+              %span Destacados
+      %h1
+        %a{:href => "home.html", :title => "habitaclick.com"} habitaclick.com
+    / /header
+    / wrapper
+    #wrapper
+      / path
+      %ul#iconOptions
+        %li.iconAddProperty.activeOpt
+          %a{:href => "agregar_inmueble.html"} Agregar inmueble
+        %li.iconUpdateProfile
+          %a{:href => "#"} Actualizar mi perfil
+        %li.iconLogout
+          %a{:href => "#"} Salir de esta cuenta
+      .path
+        %a{:href => "home.html", :title => ""} Inicio
+        \»
+        %a{:href => "#"} Mi habitaclick
+        \» Nombre de usuario
+      / / path
+      / content DASH
+      #contentDash
+        .avatar
+          %a{:href => "#"}
+            %img{:alt => "Nombre de usuario", :height => "48", :src => "pix/iface/small_default_photo.gif", :width => "48"}/
+        %h2
+          %a{:href => "agregar_inmueble.html"} Agregar un inmueble
+          %small Llena los siguientes datos para publicar tu inmueble en habitaclick
+        / split DASH
+        #splitDash.split
+          / LEFT
+          .floatL
+            %form#publishForm_alt.formsprofile{:action => "", :method => "post", :name => "publishForm_alt"}
+              / mediaSide
+              #dashTabs
+                / list
+                %ul#dashList
+                  %li
+                    %a.selected{:href => "#sec1", :title => "Datos Geográficos"} Datos Geográficos
+                  %li
+                    %a{:href => "#sec2", :title => "Datos Económicos"} Datos Económicos
+                  %li
+                    %a{:href => "#sec3", :title => " Descripción"} Descripción
+                  %li
+                    %a{:href => "#sec4", :title => "Media"} Media
+                / / list
+                / geograficos
+                #sec1.dashSec
+                  %fieldset
+                    %p
+                      %label{:for => "PropertyEstado"}
+                        Este inmueble se:
+                        %small (*)
+                      %select#PropertyEstado{:name => "PropertyEstado"}
+                        %option{:value => "estado"} -- Selecciona una opción --
+                        %option{:value => "renta"} Renta
+                        %option{:value => "venta"} Vende
+                        %option{:value => "traspaso"} Traspasa
+                    %p
+                      %label{:for => "PropertyStreet"}
+                        Nombre de la calle
+                        %small (Debes llenar este campo)
+                      %input#PropertyStreet.errField{:name => "PropertyStreet", :type => "text", :value => ""}/
+                    %p
+                      %label{:for => "PropertyNumber"}
+                        Número
+                        %small (*)
+                      %input#PropertyNumber{:name => "PropertyNumber", :type => "text", :value => ""}/
+                    %p
+                      %label{:for => "PropertyStateId"}
+                        \¿En qué estado se encuentra?
+                        %small (*)
+                      %select#PropertyStateId{:name => "PropertyStateId"}
+                        %option{:value => "0"} --Selecciona un estado--
+                        %option{:value => "1"} aguascalientes
+                        %option{:value => "2"} baja california
+                        %option{:value => "3"} baja california sur
+                        %option{:value => "4"} campeche
+                        %option{:value => "5"} coahuila
+                        %option{:value => "6"} colima
+                        %option{:value => "7"} chiapas
+                        %option{:value => "8"} chihuahua
+                        %option{:value => "9"} distrito federal
+                        %option{:value => "10"} durango
+                        %option{:value => "11"} guanajuato
+                        %option{:value => "12"} guerrero
+                        %option{:value => "13"} hidalgo
+                        %option{:value => "14"} jalisco
+                        %option{:value => "15"} estado de mexico
+                        %option{:value => "16"} michoacan
+                        %option{:value => "17"} morelos
+                        %option{:value => "18"} nayarit
+                        %option{:value => "19"} nuevo leon
+                        %option{:value => "20"} oaxaca
+                        %option{:value => "21"} puebla
+                        %option{:value => "22"} queretaro
+                        %option{:value => "23"} quintana roo
+                        %option{:value => "24"} san luis potosi
+                        %option{:value => "25"} sinaloa
+                        %option{:value => "26"} sonora
+                        %option{:value => "27"} tabasco
+                        %option{:value => "28"} tamaulipas
+                        %option{:value => "29"} tlaxcala
+                        %option{:value => "30"} veracruz
+                        %option{:value => "31"} yucatan
+                        %option{:value => "32"} zacatecas
+                        %option{:value => "791"} nezahualcoyotl
+                    %p
+                      %img.imgLoading{:alt => "Actualizando información...", :height => "11", :src => "pix/iface/loading.gif", :width => "11"}/
+                      %label{:for => "PropertyCityId"}
+                        Escoge un municipio
+                        %small (*)
+                      %select#PropertyCityId{:name => "PropertyCityId"}
+                        %option{:selected => "selected", :value => "0"} --Selecciona un Municipio--
+                    %p
+                      %label{:for => "PropertyColoniaId"}
+                        Escoge una colonia
+                        %small (*)
+                      %select#PropertyColoniaId{:name => "PropertyColoniaId"}
+                        %option{:selected => "selected", :value => "0"} --Selecciona una colonia--
+                    %p.tabNav
+                      %a.aRight{:href => "#sec2"} Siguiente paso »
+                / /geograficos
+                / economicos
+                #sec2.dashSec
+                  %fieldset
+                    %p
+                      %label{:for => "PropertyMoneyType"} El tipo de cambio es:
+                      %select#PropertyMoneyType{:name => "PropertyMoneyType"}
+                        %option{:value => "moneda"} --Seleccione tipo de cambio --
+                        %option{:value => "usd"} USD dólares
+                        %option{:value => "mxp"} MXP pesos
+                    %p
+                      %label{:for => "PropertyPrice"}
+                        Precio de la propiedad
+                        %small (*)
+                      %input#PropertyPrice{:maxlength => "10", :name => "PropertyPrice", :type => "text", :value => ""}/
+                    %p
+                      %label{:for => "PropertyTypeId"}
+                        Tipo de inmueble
+                        %small (*)
+                      %select#PropertyTypeId{:name => "PropertyTypeId"}
+                        %option{:value => "1"} Casa
+                        %option{:value => "2"} Terreno
+                        %option{:value => "3"} Local Comercial
+                        %option{:value => "4"} Bodega
+                        %option{:value => "5"} Tiempo Compartido
+                        %option{:value => "6"} Loft
+                        %option{:value => "7"} Departamento/condo
+                        %option{:value => "8"} Rancho/Granja
+                    %p
+                      %label{:for => "PropertyTotalArea"} Tamaño total del terreno
+                      %input#PropertyTotalArea{:maxlength => "8", :name => "PropertyTotalArea", :type => "text", :value => ""}/
+                    %p
+                      %label{:for => "PropertyTotalBuild"} Espacio total construido del terreno
+                      %input#PropertyTotalBuild{:maxlength => "8", :name => "PropertyTotalBuild", :type => "text", :value => ""}/
+                    %p
+                      %label{:for => "PropertyNumberRooms"} Numero de cuartos del inmueble
+                      %select#PropertyNumberRooms{:name => "PropertyNumberRooms"}
+                        %option{:value => "1"} 1+
+                        %option{:value => "2"} 2+
+                        %option{:value => "3"} 3+
+                        %option{:value => "4"} 4+
+                    %p
+                      %label{:for => "PropertyNumberBathrooms"} Numero de baños del inmueble
+                      %select#PropertyNumberBathrooms{:name => "PropertyNumberBathrooms"}
+                        %option{:value => "1"} 1+
+                        %option{:value => "2"} 2+
+                        %option{:value => "3"} 3+
+                        %option{:value => "4"} 4+
+                    %p
+                      %label{:for => "PropertyAge"}
+                        Antigüedad de la vivienda
+                        %small (en años)
+                      %input#PropertyAge{:maxlength => "4", :name => "PropertyAge", :type => "text", :value => ""}/
+                    %p.tabNav
+                      %a.aRight{:href => "#sec2"} Siguiente paso »
+                      %a.aLeft{:href => "#sec1"} « Regresar al paso anterior
+                / /economicos
+                / descripcion
+                #sec3.dashSec
+                  %fieldset#PropertyTextDesc
+                    %p
+                      %label{:for => "PropertyShortDescription"}
+                        Descripción corta:
+                        %small (Máx. 250 caracteres)
+                      %textarea#PropertyShortDescription{:cols => "20", :name => "PropertyShortDescription", :rows => "3"}
+                    %p
+                      %label{:for => "PropertyDescription"} Descripció completa:
+                      %textarea#PropertyDescription{:cols => "20", :name => "PropertyDescription", :rows => "5"}
+                    %p.tabNav
+                      %a.aRight{:href => "#sec2"} Siguiente paso »
+                      %a.aLeft{:href => "#sec1"} « Regresar al paso anterior
+                / /descripcion
+                / media
+                #sec4.dashSec
+                  %fieldset#upImgs
+                    %legend Subir imágenes con esta propiedad
+                    %p
+                      %input#PropertyImage{:name => "PropertyImage", :type => "file"}/
+                    %ul#listUpImgs
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img01.jpg
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img02.jpg
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img03.jpg
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img04.jpg
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img05.jpg
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img06.jpg
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img07.jpg
+                      %li
+                        %a{:href => "#", :title => "Borrar"}> Borrar
+                        img08.jpg
+                    %p.tabNav
+                      %a.aLeft{:href => "#sec1"} « Regresar al paso anterior
+                / /media
+                :javascript
+                  $("#dashList").idTabs(); 
+              / /mediaList
+              %h2 Señale la ubicación de su inmueble
+              %fieldset#PropertyLocalization
+                %p.msg.info Una vez que haga click sobre esta imagen, señale con el cursor la ubicación de su inmueble.
+                #mapMundi
+                  %img{:alt => "", :height => "300", :src => "pix/temp/mapmundi.gif", :width => "760"}/
+              %p.center
+                %input#btnSave.btn{:name => "btnSave", :type => "submit", :value => "Publicar inmueble"}/
+          / / LEFT
+          / RIGHT
+          .floatR
+            %p
+              %img{:alt => "160x600", :height => "600", :src => "pix/temp/160x600.gif", :width => "160"}/
+          / / RIGHT
+        / / split DASH
+      / /content DASH
+    / wrapper
+    %br.clear/
+    .push
+  #footer.foot
+    .wrap
+      / footer right
+      .floatR
+        %a#aUp{:href => "#top", :title => "Subir"} Subir
+        %a#logoFoot{:href => "#", :title => "Volver a la portada de habitaclick"} habitaclick
+        %strong
+          Copyright © 2008
+          %br/
+          GlobexCorporaciones.
+      / /footer right
+      / footer left
+      .floatL
+        .footSec
+          %h3 Usuarios
+          %ul
+            %li
+              %a{:href => "#", :title => "Inicio"} Inicio
+            %li
+              %a{:href => "#", :title => "Ventas"} Ventas
+            %li
+              %a{:href => "#", :title => "Rentas"} Rentas
+            %li
+              %a{:href => "#", :title => "Mi Habitaclick"} Mi Habitaclick
+            %li
+              %a{:href => "#", :title => "Ayuda"} Ayuda
+            %li
+              %a{:href => "#", :title => "Políticas de Privacidad"} Políticas de Privacidad
+        .footSec
+          %h3 Habitaclick
+          %ul
+            %li
+              %a{:href => "#", :title => "Acerca de"} Acerca de
+            %li
+              %a{:href => "#", :title => "Contacto"} Contacto
+            %li
+              %a{:href => "#", :title => "Inmobiliarias"} Inmobiliarias
+            %li
+              %a{:href => "#", :title => "Términos"} Términos
+            %li
+              %a{:href => "#", :title => "Feedback"} Feedback
+            %li
+              %a{:href => "#", :title => "Publicidad"} Publicidad
+            %li
+              %a{:href => "#", :title => "Empleos"} Empleos
+      / /footer left

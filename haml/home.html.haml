@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title habitaclick.com
+    %link{:href => "stylesheets/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "js/jquery-1.2.6.pack.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.idTabs.min.js", :type => "text/javascript"}
+    %script{:src => "js/facebox.js", :type => "text/javascript"}
+    %script{:src => "js/hc.js", :type => "text/javascript"}
+  %body
+    #container
+      / header
+      #header
+        / topMenu
+        #topMenu
+          %ul
+            %li
+              %a{:href => "registro.html", :title => "Regístrate"} Regístrate
+            %li
+              %a{:href => "contrasena.html", :title => "¿Olvidaste tu contraseña?"} ¿Olvidaste tu contraseña?
+            %li
+              %a{:href => "login.html", :rel => "facebox", :title => "Ingresar"} Ingresar
+        / /topMenu
+        #mainMenu
+          %ul
+            %li.current
+              %a{:href => "home.html", :title => "Inicio"}
+                %span Inicio
+            %li
+              %a{:href => "inmuebles.html", :title => "Inmuebles"}
+                %span Inmuebles
+            %li
+              %a{:href => "publicar.html", :title => "Publicar"}
+                %span Publicar
+            %li
+              %a{:href => "destacados.html", :title => "Destacados"}
+                %span Destacados
+        %h1
+          %a{:href => "home.html", :title => "habitaclick.com"} habitaclick.com
+      / /header
+      / wrapper
+      #wrapper
+        / video holder
+        #vidHold
+          %object{:data => "media/video.swf", :height => "250", :type => "application/x-shockwave-flash", :width => "336"}
+            %param{:name => "movie", :value => "media/video.swf"}/
+            %param{:name => "bgcolor", :value => "#FFF"}/
+            %param{:name => "wmode", :value => "transparent"}/
+            %a{:href => "http://www.macromedia.com/shockwave/download/alternates/", :title => "flash player"}
+              %img{:alt => "Descargar Flash Player", :height => "250", :src => "pix/temp/videoref.jpg", :width => "336"}/
+        / /video holder
+        / searchform_h
+        %form#searchform_h{:action => "", :method => "post", :name => "searchform_h"}
+          %strong Encuentra un Inmueble en
+          %p
+            %input#srch_input{:name => "srch_input", :onblur => "if (this.value == '') {this.value = 'Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir';}", :onfocus => "if (this.value == 'Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir') {this.value = '';}", :type => "text", :value => "Ingresa Estado , Ciudad o bien CP ó colonia de donde deseas vivir"}/
+          / split main form
+          #splitForm
+            / split main form L
+            #splitFormL
+              #srch_type
+                %p
+                  %label{:for => "type"} Tipo de inmueble
+                  %select#type{:name => "type"}
+                    %option Selecciona el tipo de inmueble que buscas
+              / split 50 form
+              #split50
+                / split50 form L
+                .floatL
+                  %p
+                    %label{:for => "price"} Precio
+                    %select#price{:name => "price"}
+                      %option Valor aproximado
+                  %p
+                    %label{:for => "rooms"} Cuartos
+                    %select#rooms{:name => "rooms"}
+                      %option Los que sean
+                / / split50 form L
+                / split50 form R
+                .floatR
+                  %p
+                    %label{:for => "price2"} Hasta
+                    %select#price2{:name => "price2"}
+                      %option Valor aproximado
+                  %p
+                    %label{:for => "baths"} Baños
+                    %select#baths{:name => "baths"}
+                      %option Los que sean
+                / /split50 form R
+              / / split50 form
+              #center
+                %p
+                  %label{:for => "chk_renta"} Renta
+                  %input#chk_renta{:name => "chk_renta", :type => "checkbox"}/
+                  %label{:for => "chk_venta"} Venta
+                  %input#chk_venta{:name => "chk_venta", :type => "checkbox"}/
+                  %label{:for => "chk_traspaso"} Traspaso
+                  %input#chk_traspaso{:name => "chk_traspaso", :type => "checkbox"}/
+            / /split main form L
+            / split main form R
+            #splitFormR
+              %p
+                %input#submit{:name => "submit", :src => "pix/search/btnSearch.gif", :type => "image", :value => "Buscar"}/
+            / split main form R
+          / /split main form
+        / /searchform_h
+        / tabsContainer
+        #tabsContainer
+          / list
+          %ul#listSec
+            %li#ftdTab_sec01
+              %a.selected{:href => "#sec01", :title => "Ubica - Inmuebles por ciudad, colonia y más..."}
+                %strong> Ubica
+                Inmuebles por ciudad, colonia y más...
+            %li#ftdTab_sec02
+              %a{:href => "#sec02", :title => "Media - Agrega videos e imágenes..."}
+                %strong> Media
+                Agrega videos e imágenes...
+            %li#ftdTab_sec03.last
+              %a{:href => "#sec03", :title => "Alertas Recibe novedades, guarda inmuebles"}
+                %strong> Alertas
+                Recibe novedades, guarda inmuebles
+          / / list
+          / sec01
+          #sec_tabs
+            #sec01
+              %img{:alt => "Ubica - Inmuebles por ciudad, colonia y más...", :height => "189", :src => "pix/temp/maps.jpg", :width => "311"}/
+              %p Sed sit amet nunc. In hac habitasse platea dictumst. Mauris orci mi, ultricies ac, venenatis et, faucibus a, eros.
+              %p Proin eu ante sed mauris mattis placerat. Sed lacus mauris, molestie vehicula, suscipit ac, facilisis ac, mi. Donec rutrum.
+            / /sec01
+            / sec01
+            #sec02
+              %img{:alt => "Ubica - Inmuebles por ciudad, colonia y más...", :height => "189", :src => "pix/temp/maps.jpg", :width => "311"}/
+              %p Nullam mollis, tellus et tincidunt viverra, justo orci porta dui, vel  ultricies urna massa et leo. Nulla sit amet odio. Mauris scelerisque  est consectetuer augue. In hac habitasse platea dictumst. Donec tempus,  est sit amet pellentesque interdum, lectus nisl consequat velit, nec  iaculis lacus leo sit amet dolor. Praesent et ipsum. .
+            / /sec01
+            / sec01
+            #sec03
+              %img{:alt => "Ubica - Inmuebles por ciudad, colonia y más...", :height => "189", :src => "pix/temp/maps.jpg", :width => "311"}/
+              %p Curabitur hendrerit quam sed  turpis. Nunc sit amet pede ut diam vestibulum lacinia. Nam porta  lacinia lorem. Proin ac sapien eget mi pulvinar elementum. Pellentesque  gravida diam non est aliquam ultrices. Suspendisse potenti.
+            / /sec01
+          :javascript
+            $("#listSec").idTabs(); 
+        / /tabsContainer
+      / wrapper
+      #push
+    #footer
+      #wrap
+        / footer right
+        .floatR
+          %a#aUp{:href => "#top", :title => "Subir"} Subir
+          %a#logoFoot{:href => "#", :title => "Volver a la portada de habitaclick"} habitaclick
+          %strong
+            Copyright © 2008
+            %br/
+            GlobexCorporaciones.
+        / /footer right
+        / footer left
+        .floatL
+          %div
+            %h3 Usuarios
+            %ul
+              %li
+                %a{:href => "#", :title => "Inicio"} Inicio
+              %li
+                %a{:href => "#", :title => "Ventas"} Ventas
+              %li
+                %a{:href => "#", :title => "Rentas"} Rentas
+              %li
+                %a{:href => "#", :title => "Mi Habitaclick"} Mi Habitaclick
+              %li
+                %a{:href => "#", :title => "Ayuda"} Ayuda
+              %li
+                %a{:href => "#", :title => "Políticas de Privacidad"} Políticas de Privacidad
+          %div
+            %h3 Habitaclick
+            %ul
+              %li
+                %a{:href => "#", :title => "Acerca de"} Acerca de
+              %li
+                %a{:href => "#", :title => "Contacto"} Contacto
+              %li
+                %a{:href => "#", :title => "Inmobiliarias"} Inmobiliarias
+              %li
+                %a{:href => "#", :title => "Términos"} Términos
+              %li
+                %a{:href => "#", :title => "Feedback"} Feedback
+              %li
+                %a{:href => "#", :title => "Publicidad"} Publicidad
+              %li
+                %a{:href => "#", :title => "Empleos"} Empleos
+        / /footer left

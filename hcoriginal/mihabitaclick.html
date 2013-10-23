@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>habitaclick.com</title>
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<script type="text/javascript" src="js/jquery-1.2.6.pack.js"></script>
+<script type="text/javascript" src="js/facebox.js"></script>
+<script type="text/javascript" src="js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="js/hc.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() { 
+    $("#tablePublished").tablesorter({ 
+        headers: { 
+            4: { 
+                sorter: false 
+            }, 
+        } 
+    }); 
+	
+	    $("#tableSaved").tablesorter({ 
+        headers: { 
+            4: { 
+                sorter: false 
+            }, 
+        } 
+    }); 
+	
+$("#tableQuestions").tablesorter({ 
+        headers: { 
+            3: { 
+                sorter: false 
+            }, 
+        } 
+    }); 
+	
+	
+});
+</script>
+</head>
+<body>
+<div id="container" class="wrap">
+  <!-- header -->
+  <div id="header">
+    <!-- topMenu -->
+    <div id="topMenu">
+     <ul>
+        <li>Bienvenido: <strong>Mauricio</strong></li>
+        <li><a href="mihabitaclick.html" title="Ir a mi habitaclick">Ir a mi habitaclick</a></li>
+        <li><a href="logout.html" title="Salir de esta cuenta">Salir de esta cuenta</a></li>
+      </ul>
+    </div>
+    <!-- /topMenu -->
+    <div id="mainMenu">
+      <ul>
+        <li><a href="home.html" title="Inicio"><span>Inicio</span></a></li>
+       <li><a href="inmuebles.html" title="Inmuebles"><span>Inmuebles</span></a></li>
+        <li><a href="publicar.html" title="Publicar"><span>Publicar</span></a></li>
+        <li><a href="destacados.html" title="Destacados"><span>Destacados</span></a></li>
+      </ul>
+    </div>
+    <h1><a href="home.html" title="habitaclick.com">habitaclick.com</a></h1>
+  </div>
+  <!-- /header -->
+  <!-- wrapper -->
+  <div id="wrapper">
+    <!-- path -->
+    <ul id="iconOptions">
+      <li class="iconAddProperty"><a href="agregar_inmueble.html">Agregar inmueble</a></li>
+      <li class="iconUpdateProfile"><a href="perfil.html">Actualizar mi perfil</a></li>
+      <li class="iconLogout"><a href="logout.html">Salir de esta cuenta</a></li>
+    </ul>
+    <div class="path"> <a href="home.html" title="">Inicio</a> &raquo; <a href="#">Mi habitaclick</a> &raquo; Nombre de usuario</div>
+    <!-- / path -->
+    <!-- content DASH -->
+    <div id="contentDash" >
+     
+        <div class="avatar"><a href="#"><img src="pix/iface/small_default_photo.gif" width="48" height="48" alt="Nombre de usuario" /></a></div>
+      <h2><a href="#">Mi habitaclick</a><small>Bienvenido <strong>nombre de usuario</strong></small></h2>
+        
+        <!-- split DASH -->
+        <div class="split" id="splitDash">
+        	<!-- LEFT -->
+        	<div class="floatL">
+        
+         <!-- mediaSide -->
+        <div id="dashTabs">
+          <!-- list -->
+          <ul id="dashList">
+            <li id="dash_published"><a class="selected" href="#dashPublished" title="Inmuebles Publicados">Inmuebles Publicados</a></li>
+            <li id="dash_saved"><a href="#dashSaved" title="Inmuebles Guardados">Inmuebles Guardados</a></li>
+            <li id="dash_questions"><a href="#dashQuestions" title="Preguntas">Preguntas</a></li>
+          </ul>
+          <!-- / list -->
+          <!-- dash_published -->
+          <div id="dashPublished" class="dashSec">
+           <table width="100%" border="0" cellpadding="0" cellspacing="0" class="wideTable cleanT" id="tablePublished">
+            <caption>
+          <strong>5</strong> Inmuebles publicados
+          </caption>
+  <thead>
+    <tr>
+      <th width="10">#</th>
+      <th width="430">Direcci&oacute;n</th>
+      <th width="140">Ciudad</th>
+      <th width="120">Estado</th>
+      <th width="80" class="thActions">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  <!-- inmueble -->
+    <tr>
+      <td>15</td>
+      <td>puertas del tule </td>
+      <td>zapopan</td>
+      <td>Jalisco</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+    <!-- inmueble -->
+    <tr>
+      <td>5</td>
+      <td>Ramon del Valle 568 </td>
+      <td>zapopan</td>
+      <td>Jalisco</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+    <!-- inmueble -->
+    <tr>
+      <td>14</td>
+      <td>charles Dickens 280 </td>
+      <td>Condesa</td>
+      <td>Distrito Federal</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+    <!-- inmueble -->
+    <tr>
+      <td>40</td>
+      <td>Noche Larga</td>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+    <!-- inmueble -->
+    <tr>
+      <td>7</td>
+      <td>puertas del tule </td>
+      <td>zapopan</td>
+      <td>Jalisco</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+  </tbody>
+</table>
+          </div>
+          <!-- /dash_published -->
+          <!-- dashSaved -->
+          <div id="dashSaved" class="dashSec">
+                     <table width="100%" border="0" cellpadding="0" cellspacing="0" class="wideTable cleanT" id="tableSaved">
+            <caption>
+          <strong>3</strong> Inmuebles guardados
+          </caption>
+  <thead>
+    <tr>
+      <th width="10">#</th>
+      <th width="430">Direcci&oacute;n</th>
+      <th width="140">Ciudad</th>
+      <th width="120">Estado</th>
+      <th width="80" class="thActions">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  <!-- inmueble -->
+    <tr>
+      <td>15</td>
+      <td>puertas del tule </td>
+      <td>zapopan</td>
+      <td>Jalisco</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+   
+    <!-- inmueble -->
+    <tr>
+      <td>40</td>
+      <td>Noche Larga</td>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+    <!-- inmueble -->
+    <tr>
+      <td>7</td>
+      <td>puertas del tule </td>
+      <td>zapopan</td>
+      <td>Jalisco</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+  </tbody>
+</table>
+          </div>
+          <!-- /dashSaved -->
+          <!-- dashQuestions -->
+          <div id="dashQuestions" class="dashSec">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="wideTable cleanT" id="tableQuestions">
+            <caption>
+          <strong>3</strong> Preguntas realizadas
+          </caption>
+  <thead>
+    <tr>
+      <th width="10">#</th>
+      <th width="60%">Pregunta</th>
+      <th width="15%">hecha por</th>
+      <th width="60" class="thActions">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+  <!-- inmueble -->
+    <tr>
+      <td>15</td>
+      <td>Lorem ipsum dolor sit amet....</td>
+      <td>usuario 01</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a class="icnReply" href="#" title="Responder">Responder</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+   
+    <!-- inmueble -->
+    <tr>
+      <td>40</td>
+      <td>Hello world!...</td>
+      <td>Roger Rabbit</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a class="icnReply" href="#" title="Responder">Responder</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+    <!-- inmueble -->
+    <tr>
+      <td>7</td>
+      <td>Donec neque. Sed neque libero, facilisis id, ornare...</td>
+      <td>Admin</td>
+      <td><a class="icnRemove" href="#" title="Borrar este inmueble">Borrar</a><a class="icnReply" href="#" title="Responder">Responder</a><a href="inmueble.html" class="icnView" title="Visitar inmueble">Ver</a></td>
+    </tr>
+   <!-- inmueble -->
+  </tbody>
+</table>
+          </div>
+          <!-- /dashQuestions -->
+          <script type="text/javascript"> 
+  $("#dashList").idTabs(); 
+</script>
+        </div>
+        <!-- /mediaList -->
+        </div>
+        <!-- / LEFT -->
+        
+        <!-- RIGHT -->
+        <div class="floatR">
+        	<p><img src="pix/temp/160x600.gif" width="160" height="600" alt="160x600" /></p>
+        </div>
+        <!-- / RIGHT -->
+        
+        </div>
+        <!-- / split DASH -->
+        
+        
+        
+    </div>
+    <!-- /content DASH -->
+  </div>
+  <!-- wrapper -->
+  <br class="clear" />
+  <div class="push"></div>
+</div>
+<div id="footer" class="foot">
+  <div class="wrap">
+    <!-- footer right -->
+    <div class="floatR"> <a href="#top" id="aUp" title="Subir">Subir</a> <a href="#" id="logoFoot" title="Volver a la portada de habitaclick">habitaclick</a> <strong>Copyright &copy; 2008<br />
+      GlobexCorporaciones.</strong> </div>
+    <!-- /footer right -->
+    <!-- footer left -->
+    <div class="floatL">
+      <div class="footSec">
+        <h3>Usuarios</h3>
+        <ul>
+          <li><a href="#" title="Inicio">Inicio</a></li>
+          <li><a href="#" title="Ventas">Ventas</a></li>
+          <li><a href="#" title="Rentas">Rentas</a></li>
+          <li><a href="#" title="Mi Habitaclick">Mi Habitaclick</a></li>
+          <li><a href="#" title="Ayuda">Ayuda</a></li>
+          <li><a href="#" title="Pol&iacute;ticas de Privacidad">Pol&iacute;ticas de Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footSec">
+        <h3>Habitaclick</h3>
+        <ul>
+          <li><a href="#" title="Acerca de">Acerca de</a></li>
+          <li><a href="#" title="Contacto">Contacto</a></li>
+          <li><a href="#" title="Inmobiliarias">Inmobiliarias</a></li>
+          <li><a href="#" title="T&eacute;rminos">T&eacute;rminos</a></li>
+          <li><a href="#" title="Feedback">Feedback</a></li>
+          <li><a href="#" title="Publicidad">Publicidad</a></li>
+          <li><a href="#" title="Empleos">Empleos</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- /footer left -->
+  </div>
+</div>
+</body>
+</html>

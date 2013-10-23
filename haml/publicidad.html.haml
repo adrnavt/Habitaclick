@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %title habitaclick.com
+    %link{:href => "stylesheets/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "js/jquery-1.2.6.pack.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.idTabs.min.js", :type => "text/javascript"}
+    %script{:src => "js/facebox.js", :type => "text/javascript"}
+    %script{:src => "js/hc.js", :type => "text/javascript"}
+  %body
+    #container.wrap
+      / header
+      #header
+        / topMenu
+        #topMenu
+          %ul
+            %li
+              %a{:href => "registro.html", :title => "Regístrate"} Regístrate
+            %li
+              %a{:href => "contrasena.html", :title => "¿Olvidaste tu contraseña?"} ¿Olvidaste tu contraseña?
+            %li
+              %a{:href => "login.html", :rel => "facebox", :title => "Ingresar"} Ingresar
+        / /topMenu
+        #mainMenu
+          %ul
+            %li
+              %a{:href => "home.html", :title => "Inicio"}
+                %span Inicio
+            %li
+              %a{:href => "inmuebles.html", :title => "Inmuebles"}
+                %span Inmuebles
+            %li
+              %a{:href => "publicar.html", :title => "Publicar"}
+                %span Publicar
+            %li
+              %a{:href => "destacados.html", :title => "Destacados"}
+                %span Destacados
+        %h1
+          %a{:href => "home.html", :title => "habitaclick.com"} habitaclick.com
+      / /header
+      / wrapper
+      #wrapper
+        %h2.pageTitle
+          Publicidad
+          %small Aliquam magna purus, accumsan at, lobortis ac, iaculis eu, turpis.
+        #page.split7030
+          .floatR
+            %ul
+              %li
+                %a{:href => "acercade.html"} Acerca de habitaclick
+              %li
+                %a{:href => "contacto.html"} Contacto
+              %li
+                %a{:href => "ayuda.html"} Ayuda
+              %li
+                %a{:href => "inmobiliarias.html"} Inmobiliarias
+              %li
+                %a{:href => "terminos.html"} Términos y condiciones
+              %li
+                %a{:href => "feedback.html"} Feedback
+              %li.activeOpt
+                %a{:href => "publicidad.html"} Publicidad
+              %li
+                %a{:href => "empleos.html"} Empleos
+          .floatL
+            %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In tincidunt  lorem sit amet nulla. Proin tempor nunc nec arcu. Vivamus vel risus non  odio sagittis egestas. Quisque iaculis molestie dui. Donec massa. Nam  lorem. Nunc sagittis ornare tortor. Aliquam euismod pharetra nibh.  Aliquam magna purus, accumsan at, lobortis ac, iaculis eu, turpis.  Phasellus placerat dictum felis. Vestibulum accumsan suscipit risus.  Nam vel dolor a mauris ornare pellentesque. Etiam urna.
+            %table.wideTable.cleanT.adverT{:border => "0", :cellpadding => "1", :cellspacing => "1", :summary => "Precios estimados", :width => "9%"}
+              %caption
+                Precios estimados
+                %br/
+              %thead
+                %tr
+                  %th.space Tamaño
+                  %th 1 Mes
+                  %th 3 Meses
+                  %th 6 Meses
+              %tbody
+                %tr
+                  %th 30×30
+                  %td $10
+                  %td $20
+                  %td $30
+                %tr
+                  %th 234×60
+                  %td $40
+                  %td $100
+                  %td $180
+                %tr
+                  %th 234×90
+                  %td $45
+                  %td $110
+                  %td $200
+                %tr
+                  %th 468×60
+                  %td $50
+                  %td $125
+                  %td $230
+                %tr
+                  %th 728×90
+                  %td $50
+                  %td $125
+                  %td $230
+                %tr
+                  %th 125×125
+                  %td $60
+                  %td $150
+                  %td $280
+                %tr
+                  %th 300×250
+                  %td $70
+                  %td $175
+                  %td $330
+              %tfoot
+                %tr
+                  %td{:colspan => "4"} Precios al 14 de Agosto del 2008, sujetos a cambios sin previo aviso y expresados en dólares
+            %table.wideTable.cleanT.adverP{:border => "0", :cellpadding => "1", :cellspacing => "1", :summary => "Posiciones de la publicidad", :width => "99%"}
+              %caption
+                Posiciones de la publicidad
+              %thead
+                %tr
+                  %th.space{:colspan => "2"} Verifica dónde se colocan la publicidad dentro de habitaclick
+              %tbody
+                %tr
+                  %th{:colspan => "2"} Box Banner 300x250 - Páginas: Home, Inmueble, Interior
+                %tr
+                  %td{:width => "34%"}
+                    %img{:alt => "ss", :height => "165", :src => "pix/temp/ss1.gif", :width => "200"}/
+                  %td{:width => "66%"} Cras blandit auctor est. Curabitur vitae tellus. Suspendisse tempor  aliquet diam. Mauris scelerisque. Fusce bibendum quam nec diam. Cras  convallis. Nullam porta. Quisque ullamcorper facilisis orci. Praesent  aliquet bibendum mauris. Nullam bibendum nulla non odio. Pellentesque  eu lectus. Fusce facilisis laoreet massa. Morbi et quam. Aenean libero.  Fusce interdum, est in molestie vestibulum, velit tellus tempus tellus,  a sodales lectus libero in massa. Sed pede lectus, porttitor ac,  faucibus et, semper eget, neque. Praesent at mauris.
+                %tr
+                  %th{:colspan => "2"} Full Banner 468x60 - Páginas: Perfil, Altas, Bajas
+                %tr
+                  %td{:width => "34%"}
+                    %img{:alt => "ss", :height => "165", :src => "pix/temp/ss1.gif", :width => "200"}/
+                  %td{:width => "66%"} Cras blandit auctor est. Curabitur vitae tellus. Suspendisse tempor  aliquet diam. Mauris scelerisque. Fusce bibendum quam nec diam. Cras  convallis. Nullam porta. Quisque ullamcorper facilisis orci. Praesent  aliquet bibendum mauris. Nullam bibendum nulla non odio. Pellentesque  eu lectus. Fusce facilisis laoreet massa. Morbi et quam. Aenean libero.  Fusce interdum, est in molestie vestibulum, velit tellus tempus tellus,  a sodales lectus libero in massa. Sed pede lectus, porttitor ac,  faucibus et, semper eget, neque. Praesent at mauris.
+              %tfoot
+                %tr
+                  %td{:colspan => "2"} Tamaños relativos en cuanto al diseño del sitio, no se aceptan tamaños especiales que no sean layers
+            %p  
+            %p  
+      / wrapper
+      .push
+    #footer.foot
+      .wrap
+        / footer right
+        .floatR
+          %a#aUp{:href => "#top", :title => "Subir"} Subir
+          %a#logoFoot{:href => "#", :title => "Volver a la portada de habitaclick"} habitaclick
+          %strong
+            Copyright © 2008
+            %br/
+            GlobexCorporaciones.
+        / /footer right
+        / footer left
+        .floatL
+          .footSec
+            %h3 Usuarios
+            %ul
+              %li
+                %a{:href => "#", :title => "Inicio"} Inicio
+              %li
+                %a{:href => "#", :title => "Ventas"} Ventas
+              %li
+                %a{:href => "#", :title => "Rentas"} Rentas
+              %li
+                %a{:href => "#", :title => "Mi Habitaclick"} Mi Habitaclick
+              %li
+                %a{:href => "#", :title => "Ayuda"} Ayuda
+              %li
+                %a{:href => "#", :title => "Políticas de Privacidad"} Políticas de Privacidad
+          .footSec
+            %h3 Habitaclick
+            %ul
+              %li
+                %a{:href => "#", :title => "Acerca de"} Acerca de
+              %li
+                %a{:href => "#", :title => "Contacto"} Contacto
+              %li
+                %a{:href => "#", :title => "Inmobiliarias"} Inmobiliarias
+              %li
+                %a{:href => "#", :title => "Términos"} Términos
+              %li
+                %a{:href => "#", :title => "Feedback"} Feedback
+              %li
+                %a{:href => "#", :title => "Publicidad"} Publicidad
+              %li
+                %a{:href => "#", :title => "Empleos"} Empleos
+        / /footer left

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+%html
+  %head
+    %meta{:content => "text/html; charset=utf-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "stylesheets/screen.css", :media => "screen", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "js/jquery-1.2.6.pack.js", :type => "text/javascript"}
+    %script{:src => "js/jquery.idTabs.min.js", :type => "text/javascript"}
+    %script{:src => "js/facebox.js", :type => "text/javascript"}
+    %script{:src => "js/hc.js", :type => "text/javascript"}
+    %title Habitaclick.com
+
+%body
+  #container.wrap
+    / header
+    #header
+      / topMenu
+      #topMenu
+        %ul
+          %li
+            %a{:href => "registro.html", :title => "Regístrate"} Regístrate
+          %li
+            %a{:href => "contrasena.html", :title => "¿Olvidaste tu contraseña?"} ¿Olvidaste tu contraseña?
+          %li
+            %a{:href => "login.html", :rel => "facebox", :title => "Ingresar"} Ingresar
+      / /topMenu
+      #mainMenu
+        %ul
+          %li
+            %a{:href => "home.html", :title => "Inicio"}
+              %span Inicio
+          %li
+            %a{:href => "inmuebles.html", :title => "Inmuebles"}
+              %span Inmuebles
+          %li
+            %a{:href => "publicar.html", :title => "Publicar"}
+              %span Publicar
+          %li
+            %a{:href => "destacados.html", :title => "Destacados"}
+              %span Destacados
+      %h1
+        %a{:href => "home.html", :title => "habitaclick.com"} habitaclick.com
+    / /header
+    / wrapper
+    #wrapper
+      %h2.pageTitle
+        Feedback
+        %small Aliquam magna purus, accumsan at, lobortis ac, iaculis eu, turpis.
+      #page.split7030
+        .floatR
+          %ul
+            %li
+              %a{:href => "acercade.html"} Acerca de habitaclick
+            %li
+              %a{:href => "contacto.html"} Contacto
+            %li
+              %a{:href => "ayuda.html"} Ayuda
+            %li
+              %a{:href => "inmobiliarias.html"} Inmobiliarias
+            %li
+              %a{:href => "terminos.html"} Términos y condiciones
+            %li.activeOpt
+              %a{:href => "feedback.html"} Feedback
+            %li
+              %a{:href => "publicidad.html"} Publicidad
+            %li
+              %a{:href => "empleos.html"} Empleos
+        .floatL
+          %p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. In tincidunt  lorem sit amet nulla. Proin tempor nunc nec arcu. Vivamus vel risus non  odio sagittis egestas. Quisque iaculis molestie dui. Donec massa. Nam  lorem. Nunc sagittis ornare tortor. Aliquam euismod pharetra nibh.  Aliquam magna purus, accumsan at, lobortis ac, iaculis eu, turpis.  Phasellus placerat dictum felis. Vestibulum accumsan suscipit risus.  Nam vel dolor a mauris ornare pellentesque. Etiam urna.
+          %h2 Lorem ipsum dolor
+          %p Proin congue massa vel pede. Vestibulum auctor justo quis mauris.  Nullam ornare. Class aptent taciti sociosqu ad litora torquent per  conubia nostra, per inceptos himenaeos. Suspendisse bibendum, dui nec  fermentum pulvinar, est est pharetra odio, rhoncus cursus eros arcu  quis leo. Praesent viverra libero at urna. Vestibulum ligula.
+          %ul
+            %li Phasellus  at augue.
+            %li Maecenas tincidunt mi ornare ligula
+            %li Phasellus in mi.
+            %li Ut  tristique erat eget tortor iaculis ultricies.
+          %p Pellentesque ac neque.  Praesent malesuada adipiscing nisi. Morbi eget turpis. Integer  adipiscing mauris ac lacus. Morbi lectus purus, sagittis sed, venenatis  gravida, commodo sed, lorem.
+    / wrapper
+    .push
+  #footer.foot
+    .wrap
+      / footer right
+      .floatR
+        %a#aUp{:href => "#top", :title => "Subir"} Subir
+        %a#logoFoot{:href => "#", :title => "Volver a la portada de habitaclick"} habitaclick
+        %strong
+          Copyright © 2008
+          %br/
+          GlobexCorporaciones.
+      / /footer right
+      / footer left
+      .floatL
+        .footSec
+          %h3 Usuarios
+          %ul
+            %li
+              %a{:href => "#", :title => "Inicio"} Inicio
+            %li
+              %a{:href => "#", :title => "Ventas"} Ventas
+            %li
+              %a{:href => "#", :title => "Rentas"} Rentas
+            %li
+              %a{:href => "#", :title => "Mi Habitaclick"} Mi Habitaclick
+            %li
+              %a{:href => "#", :title => "Ayuda"} Ayuda
+            %li
+              %a{:href => "#", :title => "Políticas de Privacidad"} Políticas de Privacidad
+        .footSec
+          %h3 Habitaclick
+          %ul
+            %li
+              %a{:href => "#", :title => "Acerca de"} Acerca de
+            %li
+              %a{:href => "#", :title => "Contacto"} Contacto
+            %li
+              %a{:href => "#", :title => "Inmobiliarias"} Inmobiliarias
+            %li
+              %a{:href => "#", :title => "Términos"} Términos
+            %li
+              %a{:href => "#", :title => "Feedback"} Feedback
+            %li
+              %a{:href => "#", :title => "Publicidad"} Publicidad
+            %li
+              %a{:href => "#", :title => "Empleos"} Empleos
+      / /footer left

@@ -1,0 +1,161 @@
+#vidHold{
+	width:336px;
+	float:right;
+	position:relative;
+	z-index:1;
+	}				
+	
+	
+	#searchform_h{
+		width:588px;
+		border:4px solid #e8e8e8;
+		padding:19px 20px;
+		*padding:21px 20px;
+		overflow:auto;
+		background:#FFF url(../pix/search/searchformBg.gif) bottom left repeat-x;
+		margin-bottom:30px;
+		font-size:11px;
+		}
+	#searchform_h p{
+		margin:5px 0;
+		}
+	#searchform_h strong{
+		text-transform:uppercase;
+		font-size:24px;
+		color:#2b8dbe;
+		}	
+	#searchform_h input,
+	#searchform_h select{
+		border:1px solid #bac3d4;
+		}	
+	#searchform_h input#submit{border:none;}
+	#searchform_h label{
+		display:block;
+		float:left;
+		margin:2px 5px;
+		text-align:right;
+		font-weight:bold;
+		}
+	#searchform_h select{
+		font-size:11px;
+		padding:4px;
+		}
+	#searchform_h #srch_input{
+		width:97%;
+		padding:8px;
+		font-size:14px;
+		text-transform:uppercase;
+		}
+	#splitForm {
+		overflow:auto;
+		
+		}
+		#splitForm #splitFormL{
+			width:374px;
+			_width:399px;
+			overflow:auto;
+			float:left;
+			}
+
+		#splitForm #splitFormR{
+			width:182px;
+			float:right;
+			}
+		#srch_type{
+		 p{
+		  label{
+		  width:96px;
+		  }
+		  select{
+		  width:268px;
+		  }
+		 }
+		} 
+		 
+	
+	#splitForm #split50 label{
+		width:44px;
+		}
+	#splitForm #split50 select{
+		width:129px;
+		}
+	#searchform_h #splitForm p.center{	
+		margin:10px 0 0 0;
+		}
+	#searchform_h #splitForm p.center label{
+		width:30px;
+		float:none;
+		display:inline;
+		}
+	#searchform_h #splitForm p.center input{
+		*border:none;
+		}
+		
+
+#tabsContainer{
+	overflow:auto;
+	clear:both;
+	background-color:#ebf6ff;
+	border:1px solid #d3ecff;
+	margin:0 0 30px 0;
+	}
+	#listSec{
+		width:310px;
+		float:left;
+		background-image:url(../pix/search/ftdTabs.gif);
+		background-position:right;
+		background-repeat:repeat-y;
+		}
+		#listSec li a{
+			padding:15px 0 15px 70px;
+			display:block;
+			height:45px;
+			border-bottom:1px solid #d3ecff;
+			background-repeat:no-repeat;
+			background-position:10px 10px;
+			font-weight:normal;
+			font-size:12px;
+			}
+		
+		#listSec li a strong{
+			font-size:18px;
+			display:block;
+			}
+		#listSec li a:link,
+		#listSec li a:visited{color:#999;}
+		
+		#listSec li a:hover{
+			background-color:#d3ecff;
+			}
+		
+		#listSec li#ftdTab_sec01 a{
+			background-image:url(../pix/icons/ftdSearch.gif);
+			}
+		#listSec li#ftdTab_sec02 a{
+			background-image:url(../pix/icons/ftdMedia.gif);
+			}
+		#listSec li#ftdTab_sec03 a{
+			background-image:url(../pix/icons/ftdAlerts.gif);
+			}
+		
+		
+		#listSec li.last a{
+				border-bottom:none;
+				}
+		#listSec li a.selected{
+			background-color:#ebf6ff;
+			color:#666;
+			}
+			
+		.tabSec{
+			width:648px;
+			float:left;
+			padding:10px;
+			background-color:#ebf6ff;
+			font-size:12px;
+			position:relative;
+			}
+		.tabSec p{
+			_position:relative;
+			}
+			
